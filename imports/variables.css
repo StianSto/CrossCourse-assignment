@@ -1,0 +1,13 @@
+:root {
+
+    /* color-palette */
+    --light_green: #e6eff0;
+    --mountain_green: #0a3641;
+    --clay_green: #a8bfbd;
+    --light_orange: #f2994b;
+    --dark_orange: #d96725;
+    --sky_blue: #a0d8fc;
+    --charcoal: #272727;
+    /* item-swiper sizes */
+    --gutter: 20px;
+}
