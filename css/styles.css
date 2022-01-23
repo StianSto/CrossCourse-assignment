@@ -1,22 +1,24 @@
 /* Global styles */
 
-
-@import 'imports/variables.css';
+@import "imports/variables.css";
 
 @font-face {
   font-family: "Arimo";
 }
+
+/* global styles */
 
 body {
   margin: 0;
   font-family: arimo, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
+a {
+  text-decoration: none;
+  color: black;
+}
 
 /* header */
-
-
 
 header {
   height: 45px;
@@ -28,22 +30,74 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* flex nav */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
 .logo {
-  position: absoulute;
-  width: 100%;
+  order: 2;
+}
+.nav-icon {
+  order: 3;
+}
+.menu_wrapper {
+  order: 1;
+  z-index: 10;
+}
+
+.hamburger-menu_header {
+  color: #fff;
+  font-size: 1.7em;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: inline-block;
+}
+
+nav {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  align-items: center;
+}
+
+nav li {
+  list-style: none;
+  font-size: 0.8em;
+}
+
+nav a {
+  color: white;
+}
+
+.searchbar {
+  background: var(--charcoal);
   text-align: center;
+  margin-top: 8px;
 }
 
-.shopping-cart_icon {
-  position: absolute;
-  right: 20px;
-  top: 18px;
-  margin: auto 0;
+.searchbar input[type="text"] {
+  box-sizing: border-box;
+  width: 70vw;
+  padding: 6px;
+  border-radius: 3px;
+  border-style: solid;
+  font-size: 1em;
 }
 
-/* [end] header */
 /* footer */
-
 footer {
   display: flex;
   flex-flow: column nowrap;
@@ -66,15 +120,4 @@ footer {
   height: 100%;
 }
 
-
-/* [end] footer */
-
 /* temporary */
-    h1 {
-        margin: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
