@@ -24,7 +24,7 @@ header {
   top: 0;
   z-index: 10;
   padding: 10px 0px;
-  background: var(--clay_green);
+  background: var(--mountain_green);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -64,7 +64,6 @@ footer {
 
 .social-media_icons img {
   height: 100%;
-
 }
 
 
