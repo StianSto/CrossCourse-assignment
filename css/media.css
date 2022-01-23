@@ -1,29 +1,36 @@
 @media only screen and (min-width: 1024px) {
   main {
-      max-width: 70%;
-      margin: 0 auto;
-    }
+    max-width: 70%;
+    margin: 0 auto;
+  }
 
-  nav li:nth-child(1), 
-  nav li:nth-child(6), 
+  nav li:nth-child(1),
+  nav li:nth-child(6),
   nav li:nth-child(7) {
-  display: none;
+    display: none;
   }
 
   /*header [desktop]*/
   header {
-    height: 70px;
+    position: relative;
+    height: 65px;
+    width: 100vw;
+    margin-bottom: 50px;
   }
 
   .topnav {
-    margin: 0 5vw;
+    margin: 0 15vw;
   }
 
-  .topnav, .logo, .logo img{
+  .topnav,
+  .logo,
+  .logo img {
     height: 100%;
   }
 
-  .logo {order: 1;}
+  .logo {
+    order: 1;
+  }
 
   .hamburger-menu_header label,
   .hamburger-menu_header input {
@@ -33,13 +40,24 @@
     display: inline-block;
   }
   nav ul {
-    flex-flow: row;
-    gap: 30px;
+    flex-flow: row wrap;
+    gap: 5vw;
+  }
+
+  .searchbar {
+    padding: 10px 0;
+    text-align: left;
+  }
+  .searchbar input[type="text"] {
+    box-sizing: border-box;
+    margin-left: 15vw;
+    padding: 15px 15px 15px 40px;
+    font-size: 1em;
   }
 }
 /* hamburger-menu on mobile and tablets */
 
-@media only screen and (max-width: 1023px) {    
+@media only screen and (max-width: 1023px) {
   nav li:nth-child(1),
   nav li:nth-child(5) {
     margin-bottom: 20px;
@@ -53,17 +71,14 @@
     width: 100vw;
     box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.527);
   }
-    /* accesibility fix for nav icons (mobile and tablets) */
-  .user_icon, .contact-us_icon {display: none;}
+  /* accesibility fix for nav icons (mobile and tablets) */
+  .user_icon,
+  .contact-us_icon {
+    display: none;
+  }
 }
 
-
-
-
-
-
-
-  /* .nav-icon {
+/* .nav-icon {
     position: absolute;
     right: 20px;
     top: 18px;

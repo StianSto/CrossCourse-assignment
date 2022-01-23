@@ -78,9 +78,14 @@ nav li {
   font-size: 0.8em;
 }
 
-nav a {
-  color: white;
+.product_category {
+  color: var(--sky_blue);
 }
+
+nav a {
+  color: white
+}
+
 
 .searchbar {
   background: var(--charcoal);
@@ -92,8 +97,6 @@ nav a {
   box-sizing: border-box;
   width: 70vw;
   padding: 6px;
-  border-radius: 3px;
-  border-style: solid;
   font-size: 1em;
 }
 
