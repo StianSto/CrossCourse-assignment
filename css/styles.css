@@ -1,16 +1,10 @@
 /* Global styles */
-
 @import "imports/variables.css";
-
-@font-face {
-  font-family: "Arimo";
-}
-
-/* global styles */
 
 body {
   margin: 0;
   font-family: arimo, Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--light_green);
 }
 
 a {
@@ -85,7 +79,6 @@ nav li {
 nav a {
   color: white
 }
-
 
 .searchbar {
   background: var(--charcoal);

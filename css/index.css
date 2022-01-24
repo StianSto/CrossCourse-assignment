@@ -1,13 +1,12 @@
 body {
   /*  background: url(../Assets/images//background-mountains@2x-mountain_green.png) no-repeat fixed bottom; */
-  background-size: auto 30%;
-  background-color: var(--light_green);
+  background-size: auto 30%;;
 }
 
 /* main */
 .banner-picture,
 .product_image,
-.blog-items_box img {
+.blog-items_box img{
   width: 100%;
 }
 
@@ -77,32 +76,30 @@ body {
 }
 
 /* blog-items */
-.blog-items_box {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 0;
-}
+  .blog-items_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
 
-.blog-items_box img {
-  display: block;
-}
+  .blog-items_box img {  /*mysterious gap-fix*/
+    display: block;
+    }
 
-.helpful_tips,
-.choosing-jacket {
-  display: flex;
-  flex: auto;
-  background: var(--charcoal);
-  color: var(--light_orange);
-  align-items: center;
-}
+  .helpful_tips,
+  .choosing-jacket {
+    display: flex;
+    background: var(--charcoal);
+    color: var(--light_orange);
 
-.helpful_tips p,
-.choosing-jacket p {
-  min-width: 200px;
-  max-width: 300px;
-  padding: 10px;
-  margin: 0;
-  font-size: 4.5vw;
-}
+  }
+
+  .helpful_tips p,
+  .choosing-jacket p {
+    padding: 10px;
+    margin: 0;
+    font-size: 4.5vw;
+    align-self: center;
+  }
 /* [end] main */

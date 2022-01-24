@@ -81,42 +81,42 @@ main h1 {
   padding: 40px 0 10px;
 }
 
-.blog-items_box {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.2em;
-}
+        .blog-items_box {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 1.2em;
+        }
 
-.blog-items_box p {
-  padding: 10px;
-  font-size: 2vw;
-}
+        .blog-items_box p {
+          padding: 10px;
+          font-size: 2vw;
+        }
 
-.blog-items_box > * {
-  background: #272727;
-  color: orange;
-  margin: 3px 3px;
-}
+        .blog-items_box > * {
+          background: #272727;
+          color: orange;
+          margin: 3px 3px;
+        }
 
-.helpful_tips {
-  display: grid;
-  grid-template-columns: 1fr 30%;
-  flex: 3;
-}
+        .helpful_tips {
+          display: grid;
+          grid-template-columns: 1fr 30%;
+          flex: 3;
+        }
 
-.helpful_tips img,
-.choosing-jacket img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+        .helpful_tips img,
+        .choosing-jacket img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
 
-.choosing-jacket {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  flex: 1;
-  align-items: stretch;
-}
+        .choosing-jacket {
+          display: grid;
+          grid-template-rows: 1fr auto;
+          flex: 1;
+          align-items: stretch;
+        }
 
 footer {
   max-width: 100%;
