@@ -93,6 +93,27 @@ nav a {
   font-size: 1em;
 }
 
+/* main */
+
+.product {
+  width: 180px;
+  background: var(--white);
+  padding: 15px;
+  border: rgba(230, 230, 230) solid 2px;
+}
+
+.product-item {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.price_swiper  {
+  background: var(--light_orange);
+  padding: 6px 20px;
+  align-self: flex-start;
+  text-align: center;
+} 
+
 /* footer */
 footer {
   display: flex;
