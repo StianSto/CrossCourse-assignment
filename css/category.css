@@ -25,9 +25,6 @@ main {
   z-index: 100;
 }
 
-.filter_box > label {
-}
-
 .wrapper_header_category {
   display: flex;
 }
@@ -76,7 +73,3 @@ main {
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  main {
-  }
-}

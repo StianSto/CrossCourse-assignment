@@ -1,0 +1,80 @@
+main {
+    margin: 200px auto !important;
+}
+
+.product_specific_card{
+    display: flex;
+    margin: 0 auto;
+    flex-flow: column;
+    max-width: 500px;
+
+    background: white;
+    padding: 40px 30px 40px;
+}
+
+.product_specific_card img{
+    margin-top: -80px;
+    
+}
+
+.wrapper_product_specific {
+    display: grid;
+    align-items: center;
+    grid-template-areas: 
+    "product_name product_name"
+    "review_stars reviews"
+    "select_size select_size"
+    "info info"
+    "product_price cta";
+    min-width: 200px;
+}
+
+.wrapper_product_specific h1 {grid-area: product_name;}
+.wrapper_product_specific .stars {grid-area: review_stars; white-space: nowrap;}
+.product_specific_review {grid-area: reviews; justify-self: end;}
+#select_size {grid-area: select_size ;}
+.product_specific_info {grid-area: info;}
+.wrapper_product_specific h2 {grid-area: product_price;}
+.wrapper_product_specific .cta {grid-area: cta;}
+
+#select_size {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--light_green);
+    border: var(clay_green);
+}
+
+.wrapper_product_specific h2 {
+    font-size: 2.5em;
+}
+
+.cta  {
+    padding: 10px 30px;
+    font-size: 1em;
+    text-transform: uppercase;
+    width: fit-content;
+    background-color: var(--dark_orange);
+    border: none;
+    color: white;
+    justify-self: end;
+}
+
+.stars {
+    color: var(--light_orange);
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+    .product_specific_card{
+        flex-flow: row;
+        margin: 0 auto;
+        min-width: 750px;
+        max-width: 1000px;
+        gap: 5%;
+    }
+}
+
+
