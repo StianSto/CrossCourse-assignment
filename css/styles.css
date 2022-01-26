@@ -138,3 +138,15 @@ footer {
 }
 
 /* temporary */
+
+
+.cta  {
+  padding: 10px 30px;
+  font-size: 1em;
+  text-transform: uppercase;
+  width: fit-content;
+  background-color: var(--dark_orange);
+  border: none;
+  color: white;
+  justify-self: end;
+}

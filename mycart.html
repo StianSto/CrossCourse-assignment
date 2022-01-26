@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="my-cart" content="confirm purchase of items. input adress info, delivery method and payment method.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mycart.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet">
+    <title>My Shopping Cart</title>
+</head>
+<body>
+    <header>
+        <section class="topnav">
+            <div class="logo">
+                <a href="index.html"><img src="Assets/images/Rainy-days_logo.svg" alt="logo of Rainy Days" class="logo_image"> </a>
+            </div>
+            <div class="nav-icon">
+                <a href="blank-page.html" class="user_icon"><img src="Assets/Icons/41-User.svg" alt="icon for user page"></a>
+                <a href="blank-page.html" class="contact-us_icon"><img src="Assets/Icons/Icon feather-phone-call.svg" alt="icon for contact us page"></a>
+                <a href="blank-page.html" class="shopping-cart_icon"><img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon"></a>
+            </div>
+            <div class="menu_wrapper">
+                <div class="hamburger-menu_header">
+                    <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+                    <input type="checkbox" id="hamburger-menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="category.html" class="product_category">Winter</a></li>
+                            <li><a href="category.html" class="product_category">Hiking</a></li>
+                            <li><a href="category.html" class="product_category">Camping</a></li>
+                            <li><a href="category.html" class="product_category">Ocean</a></li>
+                            <li><a href="blank-page.html" class="nav-icon_mobile_text">User profile</a></li>
+                            <li><a href="blank-page.html" class="nav-icon_mobile_text">Contact us</a></li>
+                            <li><a href="blank-page.html">About us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <div class="searchbar">
+            <input type="text" placeholder= "Search products"> 
+        </div>
+    </header>
+    <main>
+        <h1>My Shopping Cart</h1>
+        <form action="" method="get">
+            <div class="content-wrapper">
+                <div class="cart_product_container">
+                    <input type="radio" value="products_cart" name="my_shopping_cart" id="products_cart" class="toggle_btn">
+                    <div>
+                        <label for="products_cart" class="toggle_text">Products</label>
+                    </div>
+                    <div class="collapsible_content_cart">
+                        <img src="Assets/images/product_1.png" alt="picture of the product, a black jacket. man poses in the black jacket in front of a blue sky">
+                        <div>
+                            <h3>Helly Hansen Supernova</h3>
+                            <p>&lt;&nbsp;<span>1</span>&nbsp;&gt;</p>
+                            <p>$ 79</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="adress_info_container">
+                    <input type="radio" value="adress_forms" name="my_shopping_cart" id="adress_forms" class="toggle_btn">
+                    <label for="adress_forms" class="toggle_text">Adress Info</label>
+                    <div class="collapsible_content_cart adress_info_inputs">
+                        <input type="text" name="adress" id="adress" placeholder="Adress">
+                        <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                        <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="text" name="city" id="city" placeholder="City">
+                        <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+                        <input type="tel" name="phone" id="phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="delivery_container">
+                    <input type="radio" value="delivery" name="my_shopping_cart" id="delivery" class="toggle_btn">
+                    <label for="delivery" class="toggle_text">Delivery</label>
+                    <div class="collapsible_content_cart">
+                        <input type="checkbox" name="same_as_adress" id="same_as_adress">
+                        <label for="same_as_adress">Same as adress</label>
+                        <input type="text" value="adress" name="adress" id="adress">
+                        <input type="text" value="city" name="city" id="city">
+                        <input type="text" value="postal_code" name="postal_code" id="postal_code">
+                        <label for="delivery_method">Choose Delivery Method</label>
+                        <select name="delivery_method" id="delivery_method">
+                            <option value="normal">Normal</option>
+                            <option value="express">Express</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="payment_container">
+                    <input type="radio" value="payment" name="my_shopping_cart" id="payment" class="toggle_btn">
+                    <label for="payment" class="toggle_text">Products</label>
+                    <div class="collapsible_content_cart">
+                        <div>
+                            <input type="radio" value="card" id="card" name="payment_method">
+                            <label for="card">Card</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="klarna" id="klarna" name="payment_method">
+                            <label for="klarna">Klarna</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="credit_card" id="credit_card" name="payment_method">
+                            <label for="credit_card">Credit Card</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="sum_total">
+                    <p>Total $179</p>
+                    <a href="checkout_success.html"><input type="submit" value="Order" class="cta"></a>
+                </div>
+            </div>
+        </form>
+    </main>
+    <!-- <footer>
+        <div class="social-media_icons">
+            <a href="blank-page.html"><img src="Assets/Icons/Icon simple-facebook.svg" alt="facebook icon redirect"></a>
+            <a href="blank-page.html"><img src="Assets/Icons/Icon awesome-instagram.svg" alt="instagram icon redirect"></a>
+            <a href="blank-page.html"><img src="Assets/Icons/Icon ionic-logo-twitter.svg" alt="twitter icon redirect"></a>
+        </div>
+    </footer> -->
+</body>
+</html>
