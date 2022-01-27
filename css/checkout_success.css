@@ -31,7 +31,7 @@ p{font-size: clamp(14px, 4vw, 26px)}
     flex: 2;
 }
 
-button {
+.back_to_home_page_btn {
     background-color: var(--sky_blue);
     border: none;
     padding: 20px;

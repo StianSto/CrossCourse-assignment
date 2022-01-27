@@ -22,7 +22,7 @@
             </div>
             <div class="nav-icon">
                 <a href="blank-page.html" class="user_icon"><img src="Assets/Icons/41-User.svg" alt="icon for user page"></a>
-                <a href="blank-page.html" class="contact-us_icon"><img src="Assets/Icons/Icon feather-phone-call.svg" alt="icon for contact us page"></a>
+                <a href="blank-page.html" class="contact-us_icon"><img src="Assets/Icons/Icon-feather-phone-call.svg" alt="icon for contact us page"></a>
                 <a href="blank-page.html" class="shopping-cart_icon"><img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon"></a>
             </div>
             <div class="menu_wrapper">
@@ -54,15 +54,23 @@
             <div class="content-wrapper">
                 <div class="cart_product_container">
                     <input type="radio" value="products_cart" name="my_shopping_cart" id="products_cart" class="toggle_btn">
-                    <div>
-                        <label for="products_cart" class="toggle_text">Products</label>
-                    </div>
-                    <div class="collapsible_content_cart">
-                        <img src="Assets/images/product_1.png" alt="picture of the product, a black jacket. man poses in the black jacket in front of a blue sky">
-                        <div>
-                            <h3>Helly Hansen Supernova</h3>
-                            <p>&lt;&nbsp;<span>1</span>&nbsp;&gt;</p>
-                            <p>$ 79</p>
+                    <label for="products_cart" class="toggle_text">Products</label>
+                    <div class="collapsible_content_cart products_cart_flex">
+                        <div class="products_cart">
+                            <img src="Assets/images/product_1.png" alt="picture of the product, a black jacket. man poses in the black jacket in front of a blue sky">
+                            <div class="products_cart_info">
+                                <h3>Helly Hansen Supernova</h3>
+                                <p>&lt;&nbsp;<span>1</span>&nbsp;&gt;</p>
+                                <p>$ 79</p>
+                            </div>
+                        </div>
+                        <div class="products_cart">
+                            <img src="Assets/images/product_2.png" alt="picture of the product, a black jacket. man poses in the black jacket in front of a blue sky">
+                            <div class="products_cart_info">
+                                <h3>Helly Hansen Supernova</h3>
+                                <p>&lt;&nbsp;<span>1</span>&nbsp;&gt;</p>
+                                <p>$ 99</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,24 +82,28 @@
                         <input type="text" name="first_name" id="first_name" placeholder="First Name">
                         <input type="text" name="last_name" id="last_name" placeholder="Last Name">
                         <input type="email" name="email" id="email" placeholder="Email">
-                        <input type="text" name="city" id="city" placeholder="City">
-                        <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+                        <div>
+                            <input type="text" name="city" id="city" placeholder="City">
+                            <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+                        </div>
                         <input type="tel" name="phone" id="phone" placeholder="Phone">
                     </div>
                 </div>
                 <div class="delivery_container">
                     <input type="radio" value="delivery" name="my_shopping_cart" id="delivery" class="toggle_btn">
                     <label for="delivery" class="toggle_text">Delivery</label>
-                    <div class="collapsible_content_cart">
-                        <input type="checkbox" name="same_as_adress" id="same_as_adress">
-                        <label for="same_as_adress">Same as adress</label>
-                        <input type="text" value="adress" name="adress" id="adress">
-                        <input type="text" value="city" name="city" id="city">
-                        <input type="text" value="postal_code" name="postal_code" id="postal_code">
+                    <div class="collapsible_content_cart delivery_inputs">
+                        <div>
+                            <input type="checkbox" name="same_as_adress" id="same_as_adress">
+                            <label for="same_as_adress">Same as adress info</label>
+                        </div>
+                        <input type="text" placeholder="Adress" name="adress" id="adress">
+                        <input type="text" placeholder="City" name="city" id="city">
+                        <input type="text" placeholder="Postal Code" name="postal_code" id="postal_code">
                         <label for="delivery_method">Choose Delivery Method</label>
                         <select name="delivery_method" id="delivery_method">
-                            <option value="normal">Normal</option>
-                            <option value="express">Express</option>
+                            <option value="normal">Normal (4-5 days)</option>
+                            <option value="express">Express (1-2 days)</option>
                         </select>
                     </div>
                 </div>
@@ -114,17 +126,17 @@
                     </div>
                 </div>
                 <div class="sum_total">
-                    <p>Total $179</p>
-                    <a href="checkout_success.html"><input type="submit" value="Order" class="cta"></a>
+                    <p>Total $178</p>
+                    <a href="checkout_success.html" class="cta">Order</a> <!--i am simulating a form sumbit button here, as i can't redirect to a successful purchase page with a form submit button without using javascript it seems. -->
                 </div>
             </div>
         </form>
     </main>
-    <!-- <footer>
+    <!--<footer>
         <div class="social-media_icons">
-            <a href="blank-page.html"><img src="Assets/Icons/Icon simple-facebook.svg" alt="facebook icon redirect"></a>
-            <a href="blank-page.html"><img src="Assets/Icons/Icon awesome-instagram.svg" alt="instagram icon redirect"></a>
-            <a href="blank-page.html"><img src="Assets/Icons/Icon ionic-logo-twitter.svg" alt="twitter icon redirect"></a>
+            <a href="blank-page.html"><img src="Assets/Icons/Icon-simple-facebook.svg" alt="facebook icon redirect"></a>
+            <a href="blank-page.html"><img src="Assets/Icons/Icon-awesome-instagram.svg" alt="instagram icon redirect"></a>
+            <a href="blank-page.html"><img src="Assets/Icons/Icon-ionic-logo-twitter.svg" alt="twitter icon redirect"></a>
         </div>
     </footer> -->
 </body>
