@@ -79,13 +79,13 @@
                     <label for="adress_forms" class="toggle_text">Adress Info</label>
                     <div class="collapsible_content_cart adress_info_inputs">
                         <input type="text" name="adress" id="adress" placeholder="Adress">
-                        <input type="text" name="first_name" id="first_name" placeholder="First Name">
-                        <input type="text" name="last_name" id="last_name" placeholder="Last Name">
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <div>
-                            <input type="text" name="city" id="city" placeholder="City">
-                            <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+                        <div class="adress_name">
+                            <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                            <input type="text" name="last_name" id="last_name" placeholder="Last Name">
                         </div>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="text" name="city" id="city" placeholder="City">
+                        <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
                         <input type="tel" name="phone" id="phone" placeholder="Phone">
                     </div>
                 </div>
@@ -93,23 +93,25 @@
                     <input type="radio" value="delivery" name="my_shopping_cart" id="delivery" class="toggle_btn">
                     <label for="delivery" class="toggle_text">Delivery</label>
                     <div class="collapsible_content_cart delivery_inputs">
+                            <div>
+                                <input type="checkbox" name="same_as_adress" id="same_as_adress">
+                                <label for="same_as_adress">Same as adress info</label>
+                            </div>
+                            <input type="text" placeholder="Adress" name="adress" id="adress">
+                            <input type="text" placeholder="City" name="city" id="city">
+                            <input type="text" placeholder="Postal Code" name="postal_code" id="postal_code">
                         <div>
-                            <input type="checkbox" name="same_as_adress" id="same_as_adress">
-                            <label for="same_as_adress">Same as adress info</label>
+                            <label for="delivery_method">Choose Delivery Method</label>
+                            <select name="delivery_method" id="delivery_method">
+                                <option value="normal">Normal (4-5 days)</option>
+                                <option value="express">Express (1-2 days)</option>
+                            </select>
                         </div>
-                        <input type="text" placeholder="Adress" name="adress" id="adress">
-                        <input type="text" placeholder="City" name="city" id="city">
-                        <input type="text" placeholder="Postal Code" name="postal_code" id="postal_code">
-                        <label for="delivery_method">Choose Delivery Method</label>
-                        <select name="delivery_method" id="delivery_method">
-                            <option value="normal">Normal (4-5 days)</option>
-                            <option value="express">Express (1-2 days)</option>
-                        </select>
                     </div>
                 </div>
                 <div class="payment_container">
                     <input type="radio" value="payment" name="my_shopping_cart" id="payment" class="toggle_btn">
-                    <label for="payment" class="toggle_text">Products</label>
+                    <label for="payment" class="toggle_text">Payment</label>
                     <div class="collapsible_content_cart">
                         <div>
                             <input type="radio" value="card" id="card" name="payment_method">
@@ -132,12 +134,12 @@
             </div>
         </form>
     </main>
-    <!--<footer>
+    <footer>
         <div class="social-media_icons">
             <a href="blank-page.html"><img src="Assets/Icons/Icon-simple-facebook.svg" alt="facebook icon redirect"></a>
             <a href="blank-page.html"><img src="Assets/Icons/Icon-awesome-instagram.svg" alt="instagram icon redirect"></a>
             <a href="blank-page.html"><img src="Assets/Icons/Icon-ionic-logo-twitter.svg" alt="twitter icon redirect"></a>
         </div>
-    </footer> -->
+    </footer>
 </body>
 </html>

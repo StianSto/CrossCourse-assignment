@@ -5,7 +5,14 @@ body {
   margin: 0;
   font-family: arimo, Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--light_green);
+/*flex for page layout*/
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap !important;
 }
+main { flex: 1; width: 100%;}
+
+
 
 a {
   text-decoration: none;
@@ -22,6 +29,7 @@ header {
   padding: 10px 0px;
   background: var(--mountain_green);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 70px; /*pushes down main-content*/
 }
 
 /* flex nav */
@@ -81,19 +89,29 @@ nav a {
 }
 
 .searchbar {
+  display: flex;
+  padding: 5px 15vw;
+  justify-content: center;
   background: var(--charcoal);
   text-align: center;
-  margin-top: 8px;
 }
 
 .searchbar input[type="text"] {
+  width: 100%;
   box-sizing: border-box;
-  width: 70vw;
-  padding: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+.search_button {
+  padding: 0 25px;
+  background-color: #404040;
+  color: white;
   font-size: 1em;
 }
 
 /* main */
+
 
 .product {
   width: 180px;
