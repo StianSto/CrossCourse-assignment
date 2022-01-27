@@ -6,8 +6,6 @@
   display: grid;
   gap: 10px 40px;
 }
-.sum_total {
-}
 
 /* collapsible tabs */
 
@@ -81,6 +79,22 @@ select {
   margin: 10px;
 }
 
+
+
+/* page styles */
+.content-wrapper > * {
+  background: white;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.summary_mycart {
+  font-size: clamp(14px, 1vw, 26px);
+  text-align: left;
+  margin-left: 20px;
+  padding: 0 5% !important;
+}
+
 .sum_total {
   margin: 0 10vw;
   width: 100%;
@@ -92,27 +106,15 @@ select {
   justify-self: center;
 }
 
-/* page styles */
-.content-wrapper > * {
-  background: white;
-  padding: 10px;
+.order_btn {
+  padding: 15px 30px !important;
+  font-size: 70%;
 }
 
 @media only screen and (min-width: 1024px) {
   .content-wrapper {
-    display: grid;
     grid-template-columns: 1fr 33%;
-    /* grid-template-areas: 
-        "products sum"
-        "adress_info sum"
-        "delivery . "
-        "payment ."; */
   }
-  /* .cart_product_container {grid-area: products;}
-    .adress_info_container {grid-area: adress_info;}
-    .delivery_container {grid-area: delivery;}
-    .payment_container {grid-area: payment;}
-    .sum_total {grid-area: sum;} */
 
   .sum_total {
     grid-column: 2 / -1;
@@ -120,5 +122,8 @@ select {
   }
   .content-wrapper > * > * {
     padding-right: 40%;
+  }
+  .content-wrapper > * > label {
+    font-size: 2em;
   }
 }
