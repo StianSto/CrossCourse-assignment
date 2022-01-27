@@ -5,14 +5,22 @@ body {
   margin: 0;
   font-family: arimo, Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--light_green);
-/*flex for page layout*/
+  /*flex for page layout*/
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap !important;
 }
-main { flex: 1; width: 100%;}
 
+main {
+  flex: 1;
+  width: 100%;
+}
 
+.banner-picture,
+.product_image,
+.blog-items_box img {
+  width: 100%;
+}
 
 a {
   text-decoration: none;
@@ -59,11 +67,9 @@ header {
 #hamburger-menu {
   display: none;
 }
-
 #hamburger-menu:checked ~ nav {
   display: inline-block;
 }
-
 nav {
   display: none;
 }
@@ -80,12 +86,11 @@ nav li {
   font-size: 0.8em;
 }
 
+nav a {
+  color: white;
+}
 .product_category {
   color: var(--sky_blue);
-}
-
-nav a {
-  color: white
 }
 
 .searchbar {
@@ -112,7 +117,6 @@ nav a {
 
 /* main */
 
-
 .product {
   width: 180px;
   background: var(--white);
@@ -125,12 +129,12 @@ nav a {
   flex-flow: column nowrap;
 }
 
-.price_swiper  {
+.price_swiper {
   background: var(--light_orange);
   padding: 6px 20px;
   align-self: flex-start;
   text-align: center;
-} 
+}
 
 /* footer */
 footer {
@@ -157,8 +161,7 @@ footer {
 
 /* temporary */
 
-
-.cta  {
+.cta {
   padding: 10px 30px;
   font-size: 1em;
   text-transform: uppercase;

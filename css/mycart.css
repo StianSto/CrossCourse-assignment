@@ -1,91 +1,66 @@
+main {
+  padding: 10px 10px 40px; /*pushes footer down + constrains main content on mobile*/
+}
+
 .content-wrapper img {
   width: 100px;
 }
 
 .content-wrapper {
+  max-width: calc(100vw - 20px);
   display: grid;
-  gap: 10px 40px;
+  gap: 10px;
 }
 
 /* collapsible tabs */
 
-.toggle_text {
-  display: block;
-}
-.toggle_btn,
-.collapsible_content_cart {
-  display: none;
-}
-.toggle_btn:checked ~ .collapsible_content_cart {
-  display: flex;
-}
+  .toggle_text {display: block;}
+  .toggle_btn, .collapsible_content_cart {display: none;}
+  .toggle_btn:checked ~ .collapsible_content_cart {display: flex;}
 
-/* products - flex */
-.products_cart_flex {
-  flex-flow: column;
-}
-.products_cart {
-  display: flex;
-  margin: 10px;
-}
-.products_cart_info {
-  margin-left: 10px;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-}
-.products_cart img {
-  object-fit: scale-down;
-} /*fixes image stretching in flex*/
+/* products_cart - flex */
+  .products_cart_flex {flex-flow: column;}
+  .products_cart {display: flex;}
+  .products_cart img {object-fit: scale-down;} /*fixes image stretching in flex*/
+  .products_cart_info span {padding: 8px;} /*number of products. will be changed when i can implement javascript to make it work as intented.*/
+  .products_cart_info {
+    display: flex;
+    flex-flow: column;
+    margin-left: 10px;
+  }
 
-.products_cart_info span {
-  padding: 8px;
-}
+/*adress and delivery forms*/
+  .adress_info_inputs, .delivery_inputs {flex-flow: row wrap;}
+  .adress_info_inputs input, .delivery_inputs input {
+    padding: 10px;
+    margin: 10px;
+    border: var(--charcoal) solid 1px;
+  }
 
-.adress_info_inputs,
-.delivery_inputs {
-  flex-flow: row wrap;
-}
+  #adress {width: 100%;}
 
-.adress_info_inputs input,
-.delivery_inputs input {
-  padding: 10px;
-  margin: 10px;
-  border: var(--charcoal) solid 1px;
-}
-#adress {
-  width: 100%;
-}
-.adress_name {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-}
-#email,
-#city,
-.adress_name > * {
-  flex: 1;
-  width: 100%;
-  min-width: 80px;
-}
-#phone,
-#postal_code {
-  width: 12ch;
-}
+  .adress_name {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
 
-/* select styles */
-select {
-  padding: 5px;
-  margin: 10px;
-}
+  #email, #city, .adress_name > * {
+    flex: 1;
+    width: 100%;
+    min-width: 20ch;
+  }
+  #phone, #postal_code {width: 12ch;}
 
+  select {
+    padding: 10px;
+    margin: 10px;
+  }
 
-
-/* page styles */
+/* page and elements styles */
 .content-wrapper > * {
   background: white;
   padding: 10px;
-  margin: 0 10px;
 }
 
 .summary_mycart {
@@ -112,18 +87,12 @@ select {
 }
 
 @media only screen and (min-width: 1024px) {
-  .content-wrapper {
-    grid-template-columns: 1fr 33%;
-  }
+  .content-wrapper {grid-template-columns: 1fr 33%;}
 
   .sum_total {
     grid-column: 2 / -1;
     grid-row: 1 / 5;
   }
-  .content-wrapper > * > * {
-    padding-right: 40%;
-  }
-  .content-wrapper > * > label {
-    font-size: 2em;
-  }
+  .content-wrapper > * > * {padding-right: 40%;}
+  .content-wrapper > * > label {font-size: 2em;}
 }
