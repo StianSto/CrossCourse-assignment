@@ -119,9 +119,9 @@ nav a {
 
 .product {
   width: 180px;
-  background: var(--white);
+  background: white;
   padding: 15px;
-  border: rgba(230, 230, 230) solid 2px;
+  /* border: rgba(230, 230, 230) solid 2px; */
 }
 
 .product-item {

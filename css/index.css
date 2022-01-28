@@ -1,13 +1,14 @@
 /* backgroundimage on main site- may or may not use it */
 
-/* body {
-   background: url(../Assets/images//background-mountains@2x-mountain_green.png) no-repeat fixed bottom;
-  background-size: auto 30%;
-} */
+body {
+/*    background: url(../Assets/images//background-mountains@2x-mountain_green.png) no-repeat fixed bottom;
+  background-size: auto 30%; */
+  background-color: var(--light_green);
+}
 
 /* main */
   .featured_products h2 {
-    background: var(--mountain_green);
+    background: var(--charcoal);
     color: white;
     padding: 20px;
     font-size: 2em;
@@ -18,6 +19,9 @@
   .featured_products {
     display: grid;
     grid-template-columns: var(--gutter) 1fr var(--gutter);
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    padding: 3%;
   }
 
   .featured_products > * {grid-column: 2 / -2;}
@@ -66,7 +70,7 @@
     .choosing-jacket p {
       padding: 10px;
       margin: 0;
-      font-size: 4.5vw;
+      font-size: clamp( 12px, 4.5vw, 38px);
       align-self: center;
     }
 /* [end] main */
