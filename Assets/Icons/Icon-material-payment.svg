@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120.946" height="96.757" viewBox="0 0 120.946 96.757">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0a3641;
+      }
+    </style>
+  </defs>
+  <path id="Icon_material-payment" data-name="Icon material-payment" class="cls-1" d="M111.851,6H15.095A12,12,0,0,0,3.06,18.095L3,90.662a12.053,12.053,0,0,0,12.095,12.095h96.757a12.053,12.053,0,0,0,12.095-12.095V18.095A12.053,12.053,0,0,0,111.851,6Zm0,84.662H15.095V54.378h96.757Zm0-60.473H15.095V18.095h96.757Z" transform="translate(-3 -6)"/>
+</svg>
