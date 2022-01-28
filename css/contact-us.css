@@ -1,0 +1,51 @@
+h1 {
+  text-align: center;
+  font-size: clamp(35px, 8vw, 80px);
+  margin: 0 0 4%;
+}
+
+h2 {
+  font-size: clamp(24px, 2vw, 30px) !important;
+  margin: 10px 0;
+}
+p {
+    font-size: clamp(16px, 2vw, 24px);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+section > * {
+  background-color: white;
+  text-align: center;
+  padding: 30px 0 0;
+}
+
+section img {
+  height: 50%;
+}
+
+.call_us_at {
+    text-align: center;
+    margin: 60px 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    max-width: 50% !important; /*important or layout*/
+  }
+  section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  section > * {
+      padding-bottom: 15px;
+  }
+  section img {
+    height: 60%;
+  }
+}

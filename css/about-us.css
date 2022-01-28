@@ -5,7 +5,7 @@ section {
   margin: 0 10px;
 }
 
-.main_wrapper {
+.middle_section {
   background-color: var(--mountain_green);
   color: white;
   padding-bottom: 30px;
@@ -19,7 +19,7 @@ section {
 }
 
 h1 {
-  font-size: clamp(35px, 8vw, 80px);
+  font-size: clamp(40px, 8vw, 80px);
 }
 
 main img {
@@ -28,7 +28,7 @@ main img {
 
 h2 {
   font-size: clamp(26px, 5vw, 48px) !important;
-  color: var(--dark_orange);
+  color: var(--light_orange);
   margin-top: 80px;
 }
 
@@ -39,7 +39,7 @@ h3 {
 }
 p {
   font-size: clamp(16px, 2vw, 30px);
-  font-weight: 100;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* sections in article*/

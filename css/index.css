@@ -27,6 +27,10 @@ body {
   .featured_products > * {grid-column: 2 / -2;}
   .featured_products > .full {grid-column: 1 / -1;}
 
+  .product {
+      min-width: 180px;
+  }
+
   .product_list {
     display: grid;
     grid-gap: calc(var(--gutter) / 2);
