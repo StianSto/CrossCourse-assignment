@@ -1,9 +1,8 @@
-/* main */
-main {
-  margin-top: 100px;
+/* filter box */
+h1 {
+  margin: 0;
 }
 
-/* filter box */
 
 #filter_icon {
   display: none;
@@ -16,13 +15,14 @@ main {
 
 .filter_box_wrapper {
   display: none;
-  position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 
 .filter_box {
-  position: relative;
-  z-index: 100;
+  position: absolute;
+  right: 10vw;
+  z-index: 10;
+  margin: 10px 0;
 }
 
 .wrapper_header_category {
@@ -31,7 +31,6 @@ main {
 
 .product_grid ul {
   display: flex;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
   list-style: none;
 }
