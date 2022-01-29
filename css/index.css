@@ -36,6 +36,7 @@ body {
     grid-gap: calc(var(--gutter) / 2);
     grid-auto-flow: column;
     overflow-x: scroll;
+    overflow-y: hidden;
     list-style: none;
     padding: 0;
   }

@@ -2,7 +2,8 @@
 @media only screen and (max-width: 1023px) {
   nav li:nth-child(1),
   nav li:nth-child(5) {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+
   }
   nav {
     background-color: var(--charcoal);
@@ -12,12 +13,12 @@
     top: 0px;
     width: 100vw;
     box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.527);
+    transform: translateY(-110%);
+    transition: transform 0.5s ease;    
   }
-  /* accesibility fix for nav icons (mobile and tablets) */
-  .contact-us_icon {
-    display: none;
+
+  .contact-us_icon {display: none;}
   }
-}
 
 /* desktop */
 @media only screen and (min-width: 1024px) {
@@ -120,8 +121,6 @@
   nav li:nth-child(2) {margin-left: 5%;}
   nav li:nth-child(6) {margin-left:auto;}
   nav li:nth-child(7) {margin-right:5%;}
-  nav li {
-  }
 }
 
 

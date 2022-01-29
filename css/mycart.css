@@ -15,7 +15,7 @@ main {
 /* collapsible tabs */
 
   .toggle_text {display: block;}
-  .toggle_btn, .collapsible_content_cart {display: none;}
+  .toggle_btn, .collapsible_content_cart {display: none; transition: display 1s;}
   .toggle_btn:checked ~ .collapsible_content_cart {display: flex;}
 
 /* products_cart - flex */

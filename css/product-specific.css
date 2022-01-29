@@ -1,5 +1,5 @@
 main {
-    margin: 200px auto !important;
+    margin: 100px auto !important;
 }
 
 .product_specific_card{
@@ -7,14 +7,12 @@ main {
     margin: 0 auto;
     flex-flow: column;
     max-width: 500px;
-
     background: white;
     padding: 40px 30px 40px;
 }
 
 .product_specific_card img{
     margin-top: -80px;
-    
 }
 
 .wrapper_product_specific {
@@ -55,53 +53,53 @@ main {
 
 
 
-                        /* collapsible boxes */
-                        .product_collapsible_box {
-                            display: grid;
-                            margin: 30px auto;
-                            max-width: 560px;
-                            grid-template-rows: repeat(minmax(autofit,0));
-                            grid-template-areas: 
-                            "specifications"
-                            "availability" 
-                            "size_guide"
-                            "other"
-                            "box";
-                        }
+/* collapsible boxes */
+    .product_collapsible_box {
+        display: grid;
+        margin: 30px auto;
+        max-width: 560px;
+        grid-template-rows: repeat(minmax(autofit,0));
+        grid-template-areas: 
+        "specifications"
+        "availability" 
+        "size_guide"
+        "other"
+        "box";
+    }
 
-                        #specifications {grid-area: specifications;}
-                        #availability {grid-area: availability;}
-                        #size_guide {grid-area: size_guide;}
-                        #other {grid-area: other;}
-                        .product_collapsible_box > div {grid-area: box;}
+    #specifications {grid-area: specifications;}
+    #availability {grid-area: availability;}
+    #size_guide {grid-area: size_guide;}
+    #other {grid-area: other;}
+    .product_collapsible_box > div {grid-area: box;}
 
-                        .product_collapsible_box label {
-                            background-color: white;
-                            border: var(--light_green);
-                            padding: 20px;
-                        }
+    .product_collapsible_box label {
+        background-color: white;
+        border: var(--light_green);
+        padding: 20px;
+    }
 
-                        input[type="radio"]:checked + .toggle_text {
-                            /* active tab title */
-                            background-color: var(--sky_blue);
-                        }
+    input[type="radio"]:checked + .toggle_text {
+        /* active tab title */
+        background-color: var(--sky_blue);
+    }
 
-                        input[type="radio"], .collapsible_content1, .collapsible_content2, .collapsible_content3, .collapsible_content4 {
-                            display: none;
-                        }
+    input[type="radio"], .collapsible_content1, .collapsible_content2, .collapsible_content3, .collapsible_content4 {
+        display: none;
+    }
 
-                        .toggle1:checked ~ .collapsible_content1,
-                        .toggle2:checked ~ .collapsible_content2,
-                        .toggle3:checked ~ .collapsible_content3,
-                        .toggle4:checked ~ .collapsible_content4 {
-                            display: block;
-                        }
-                                            
-                        .product_collapsible_box article {
-                            background-color: rgb(255, 255, 255);
-                            padding: 20px;
-                            margin-top: 5px;
-                        }
+    .toggle1:checked ~ .collapsible_content1,
+    .toggle2:checked ~ .collapsible_content2,
+    .toggle3:checked ~ .collapsible_content3,
+    .toggle4:checked ~ .collapsible_content4 {
+        display: block;
+    }
+                        
+    .product_collapsible_box article {
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        margin-top: 5px;
+    }
 
 
 @media only screen and (min-width: 1024px) {

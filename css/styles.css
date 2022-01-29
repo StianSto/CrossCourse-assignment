@@ -27,6 +27,11 @@ a {
   color: black;
 }
 
+.active {
+  text-decoration: underline;
+}
+
+
 /* header */
 
 header {
@@ -45,7 +50,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px;
+  margin: 0 20px 7px;
 }
 
 .logo {
@@ -64,14 +69,15 @@ header {
   font-size: 1.7em;
 }
 
-#hamburger-menu {
-  display: none;
+#hamburger-menu {display: none;}
+
+#hamburger-menu:checked ~ .dingdong {
+  color: aqua;
 }
+
 #hamburger-menu:checked ~ nav {
   display: inline-block;
-}
-nav {
-  display: none;
+  transform: translateY(0);
 }
 
 nav ul {
@@ -84,6 +90,11 @@ nav ul {
 nav li {
   list-style: none;
   font-size: 0.8em;
+  padding: 4px 0;
+}
+
+nav li:nth-child(1) {
+  font-size: 1.2em;
 }
 
 nav a {
@@ -120,6 +131,13 @@ nav a {
 .product {
   background: white;
   padding: 15px;
+  transition: transform 0.6s;
+}
+
+.product:hover{
+  transform: scale(1.1);
+  z-index: 2;
+  box-shadow: 0 0 15px #e2e2e2;
 }
 
 .product-item {
@@ -172,4 +190,17 @@ footer {
   border: none;
   color: white;
   justify-self: end;
+}
+.cta:hover {
+  background-color: white;
+  border: var(--dark_orange) solid 2px;
+  font-weight: bold;
+  color: var(--dark_orange);
+  cursor:pointer;
+}
+
+.toggle_text:hover,
+input:hover,
+select:hover {
+  cursor:pointer;
 }
