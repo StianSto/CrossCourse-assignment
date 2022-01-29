@@ -27,7 +27,7 @@
   header {
     position: relative;
     height: 65px;
-    margin-bottom: 120px; /*pushes down main-content*/
+    margin-bottom: 40px; /*pushes down main-content*/
   }
 
   .topnav {

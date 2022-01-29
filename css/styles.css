@@ -41,7 +41,7 @@ header {
   padding: 10px 0px;
   background: var(--mountain_green);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 70px; /*pushes down main-content*/
+  margin-bottom: 50px; /*pushes down main-content*/
 }
 
 /* flex nav */
@@ -192,7 +192,8 @@ footer {
   color: white;
   justify-self: end;
 }
-.#add_to_cart_toggle:hover {
+
+.cta:hover {
   background-color: white;
   border: var(--dark_orange) solid 2px;
   font-weight: bold;
