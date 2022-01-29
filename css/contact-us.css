@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  font-size: clamp(35px, 8vw, 80px);
+  font-size: clamp(35px, 4vw, 60px);
   margin: 0 0 4%;
 }
 
@@ -16,6 +16,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  margin: 0 10px;
 }
 
 section > * {
@@ -35,7 +36,7 @@ section img {
 
 @media only screen and (min-width: 1024px) {
   main {
-    max-width: 50% !important; /*important or layout*/
+    max-width: 60% !important; /*important or layout*/
   }
   section {
     display: grid;
@@ -45,7 +46,5 @@ section img {
   section > * {
       padding-bottom: 15px;
   }
-  section img {
-    height: 60%;
-  }
 }
+

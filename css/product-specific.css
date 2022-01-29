@@ -11,8 +11,11 @@ main {
     padding: 40px 30px 40px;
 }
 
-.product_specific_card img{
+.product_specific_card > img{
     margin-top: -80px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
 }
 
 .wrapper_product_specific {

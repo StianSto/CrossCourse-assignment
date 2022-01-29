@@ -86,7 +86,7 @@ main {
   font-size: 70%;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .content-wrapper {grid-template-columns: 1fr 33%;}
 
   .sum_total {

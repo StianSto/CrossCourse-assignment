@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Helly Hansen Supernova. durable jacket that is suited for all weather. Unisex, deep blue. ">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/product-specific.css">
     <link rel="stylesheet" href="css/media.css">
@@ -13,42 +14,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet">
     <title>HH Supernova</title>
 </head>
-<header>
-    <div class="topnav">
-        <div class="logo">
-            <a href="index.html"><img src="Assets/images/Rainy-days_logo.svg" alt="logo of Rainy Days" class="logo_image"> </a>
-        </div>
-        <div class="nav-icon">
-            <a href="blank-page.html" class="shopping-cart_icon"><img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon"></a>
-        </div>
-        <div class="menu_wrapper">
-            <div class="hamburger-menu_header">
-                <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
-                <input type="checkbox" id="hamburger-menu">
-                <nav>
-                    <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="category.html" class="product_category">Winter</a></li>
-                        <li><a href="category.html" class="product_category">Hiking</a></li>
-                        <li><a href="category.html" class="product_category">Camping</a></li>
-                        <li><a href="category.html" class="product_category">Ocean</a></li>
-                        <li><a href="blank-page.html">Contact us</a></li>
-                        <li><a href="about-us.html">About us</a></li>
-                    </ul>
-                </nav>
+<body>
+    <header>
+        <div class="topnav">
+            <div class="logo">
+                <a href="index.html"><img src="Assets/images/Rainy-days_logo.svg" alt="logo of Rainy Days" class="logo_image"> </a>
+            </div>
+            <div class="nav-icon">
+                <a href="mycart.html" class="shopping-cart_icon"><img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon"></a>
+            </div>
+            <div class="menu_wrapper">
+                <div class="hamburger-menu_header">
+                    <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+                    <input type="checkbox" id="hamburger-menu">
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="category.html" class="product_category">Winter</a></li>
+                            <li><a href="category.html" class="product_category">Hiking</a></li>
+                            <li><a href="category.html" class="product_category">Camping</a></li>
+                            <li><a href="category.html" class="product_category">Ocean</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="searchbar">
-        <input type="text" placeholder= "Search products"> 
-        <button class="search_button"><i class="fas fa-search"></i></button>
-    </div>
-</header>
-<body>
+        <div class="searchbar">
+            <input type="text" placeholder= "Search products"> 
+            <button class="search_button"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
     <main>
         <div class="content_wrapper">
             <div class="product_specific_card">
-                <img src="Assets/images/product_2.png" alt="picture of product. The product is a jacket in blue, white and black.">
+                <img src="Assets/images/specific product/product_1@3x.jpg" alt="picture of product. The product is a jacket in blue, white and black.">
                 <div class="wrapper_product_specific">
                     <h1>Helly Hansen Supernova</h1>
                     <div class="stars">
@@ -68,7 +69,12 @@
                     </select>
                     <p class="product_specific_info">Lorem, ipsum dolor sit deserunt quam cum incidunt, est repudiandae ducimus quisquam magnam assumenda corporis, molestias architecto!</p>
                     <h2>$ 79</h2>
-                    <button class="cta">Add to Cart</button>
+                    <label class="cta" for="add_to_cart_toggle">Add to Cart</label>
+                    <input type="checkbox" id="add_to_cart_toggle" class="cta">
+                    <div class="added_to_cart">
+                        <img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon">
+                        <p>Added to cart</p>
+                    </div>
                 </div>
             </div>
         </div>
