@@ -1,17 +1,12 @@
 /* needed for "about us" layout-design */
 main {
   max-width: none !important;
-} 
-@media only screen and (min-width: 1024px) {
-  section {
-    max-width: 60%;
-    margin: 0 auto;
-  }
+}
+section {
+  padding: 30px 20px;
 }
 
 /* About us - Main */
-section {margin: 0 10px;}
-
 .about_us_header {
   background-color: var(--light_green);
   width: 100vw;
@@ -48,7 +43,6 @@ article {
 .middle_section {
   background-color: var(--mountain_green);
   color: white;
-  padding-bottom: 30px;
 }
 
 .section-who_are_we img {
@@ -69,11 +63,22 @@ article {
   object-fit: cover;
 }
 
-.our_goal-img_group img:nth-child(2) {object-position: 50% 30%;}
-.our_goal-img_group img:nth-child(3) {object-position: 50% 70%;}
+.our_goal-img_group img:nth-child(2) {
+  object-position: 50% 30%;
+}
+.our_goal-img_group img:nth-child(3) {
+  object-position: 50% 70%;
+}
 
 /* section: pushing our comfort zone */
 .logo_about_us {
   width: 50%;
   margin: 10% auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  section {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 }
