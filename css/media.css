@@ -12,7 +12,7 @@
       z-index: -1;
       left: 0px;
       top: 0px;
-      width: 100vw;
+      width: 100%;
       box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.527);
       transform: translateY(-110%);
       transition: transform 0.5s ease;    
@@ -110,7 +110,7 @@
     width: 100%;
     gap: 3%;
   }
-  
+
   nav li:nth-child(2) {margin-left: 5%;}
   nav li:nth-child(6) {margin-left:auto;}
   nav li:nth-child(7) {margin-right:5%;}

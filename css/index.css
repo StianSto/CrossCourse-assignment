@@ -8,12 +8,9 @@ body {
 
 /* hero */
 .hero {
-  width: 100vw;
-  max-height: 60vh;
 }
 
 .hero_picture {
-  max-height: 60vh;
   width: 100%;
   margin: 0;
 }
@@ -21,7 +18,6 @@ body {
 .hero_picture img {
   object-fit: cover;
   transform-origin: right;
-  max-height: 60vh;
 }
 
 .hero_text {
