@@ -14,11 +14,12 @@ body {
 main {
   flex: 1;
   width: 100%;
-}
+} 
 
 .banner-picture,
 .product_image,
-.blog-items_box img {
+.blog-items_box img,
+.about_us_content img {
   width: 100%;
 }
 
@@ -27,20 +28,17 @@ a {
   color: black;
 }
 
-.active {
-  text-decoration: underline;
-}
+.active {text-decoration: underline;}
 
 /* header */
-
 header {
-  height: 45px;
   position: sticky;
   top: 0;
   z-index: 10;
   padding: 10px 0px;
   background: var(--mountain_green);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 45px;
   margin-bottom: 50px; /*pushes down main-content*/
 }
 
@@ -52,12 +50,8 @@ header {
   margin: 0 20px 7px;
 }
 
-.logo {
-  order: 2;
-}
-.nav-icon {
-  order: 3;
-}
+.logo {order: 2;}
+.nav-icon {order: 3;}
 .menu_wrapper {
   order: 1;
   z-index: 10;
@@ -68,13 +62,7 @@ header {
   font-size: 1.7em;
 }
 
-#hamburger-menu {
-  display: none;
-}
-
-#hamburger-menu:checked ~ .dingdong {
-  color: aqua;
-}
+#hamburger-menu {display: none;}
 
 #hamburger-menu:checked ~ nav {
   display: inline-block;
@@ -94,16 +82,9 @@ nav li {
   padding: 4px 0;
 }
 
-nav li:nth-child(1) {
-  font-size: 1.2em;
-}
-
-nav a {
-  color: white;
-}
-.product_category {
-  color: var(--sky_blue);
-}
+nav li:nth-child(1) {font-size: 1.2em;}
+nav a {color: white;}
+.product_category {color: var(--sky_blue);}
 
 .searchbar {
   display: flex;
@@ -135,11 +116,6 @@ nav a {
   transition: transform 0.6s;
 }
 
-.product:hover {
-  transform: scale(1.1);
-  z-index: 2;
-  box-shadow: 0 0 15px #e2e2e2;
-}
 
 .product-item {
   display: flex;
@@ -148,7 +124,7 @@ nav a {
   justify-content: space-between;
 }
 
-.price_swiper {
+.price {
   background: var(--light_orange);
   padding: 6px 20px;
   width: fit-content;
@@ -172,16 +148,10 @@ footer {
   align-content: flex-end;
 }
 
-.social-media_icons > * {
-  margin: 0 20px 10px;
-}
-
-.social-media_icons img {
-  height: 100%;
-}
+.social-media_icons > * {margin: 0 20px 10px;}
+.social-media_icons img {height: 100%;}
 
 /* temporary */
-
 .cta {
   padding: 10px 30px;
   text-align: center;
@@ -208,9 +178,7 @@ select:hover {
 }
 
 /* add to cart modal */
-#add_to_cart_toggle {
-  display: none;
-}
+#add_to_cart_toggle {display: none;}
 
 .added_to_cart {
   background-color: var(--dark_orange);
@@ -251,16 +219,8 @@ input:checked ~ .added_to_cart {
 }
 
 @keyframes added_to_cart_animated {
-  0% {
-    top: -500px;
-  }
-  20% {
-    top: 200px;
-  }
-  70% {
-    top: 200px;
-  }
-  100% {
-    top: -500px;
-  }
+  0% {top: -500px;}
+  20% {top: 200px;}
+  70% {top: 200px;}
+  100% {top: -500px;}
 }

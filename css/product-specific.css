@@ -1,6 +1,4 @@
-main {
-    margin: 100px auto !important;
-}
+main {margin: 100px auto !important;}
 
 .product_specific_card{
     display: flex;
@@ -49,12 +47,7 @@ main {
     font-size: 2.5em;
 }
 
-
-.stars {
-    color: var(--light_orange);
-}
-
-
+.stars {color: var(--light_orange);}
 
 /* collapsible boxes */
     .product_collapsible_box {
@@ -82,11 +75,7 @@ main {
         padding: 20px;
     }
 
-    input[type="radio"]:checked + .toggle_text {
-        /* active tab title */
-        background-color: var(--sky_blue);
-    }
-
+    input[type="radio"]:checked + .toggle_text {background-color: var(--sky_blue);} /* active tab title */
     input[type="radio"], .collapsible_content1, .collapsible_content2, .collapsible_content3, .collapsible_content4 {
         display: none;
     }
@@ -106,13 +95,13 @@ main {
 
 
 @media only screen and (min-width: 1024px) {
-    main {
-        max-width: 80% !important; /*overlap fix*/
-    }
+    main {min-width: 840px !important; } /*overlap fix */
+
     .content_wrapper {
         display: flex;
         justify-content: center;
     }
+
     .product_specific_card{
         flex-flow: row;
         margin: 0 auto;
@@ -122,14 +111,10 @@ main {
     }
 
     .product_collapsible_box {
-        grid-template-columns: repeat(minmax(autofit,0));
         grid-template-areas: 
         "specifications availability size_guide other"
         "box box box box";
-    }
-    .product_collapsible_box {
         min-width: 810px;
         max-width: 1060px;
-        font-size: 1.5em;
     }
 }

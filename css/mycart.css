@@ -77,7 +77,7 @@ main {
   min-width: fit-content;
   font-size: 2em;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 0 !important;
   justify-self: center;
 }
 
@@ -86,13 +86,22 @@ main {
   font-size: 70%;
 }
 
+.sum_total p {
+  padding: 0 !important
+}
+
 @media only screen and (min-width: 768px) {
   .content-wrapper {grid-template-columns: 1fr 33%;}
+  .content-wrapper > * > * {padding-right: 40%;}
 
   .sum_total {
     grid-column: 2 / -1;
     grid-row: 1 / 5;
   }
-  .content-wrapper > * > * {padding-right: 40%;}
-  .content-wrapper > * > label {font-size: 2em;}
+
+}
+
+/* temporary */
+h2 {
+  margin: 0;
 }

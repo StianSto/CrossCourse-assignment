@@ -13,9 +13,7 @@ main {
     max-width: 550px;
 }
 
-main img {
-    width: 100%;
-}
+main img {width: 100%;}
 
 .check_icon {
     width: 60vw;
@@ -27,9 +25,7 @@ main img {
 h1 {font-size: clamp(24px, 7vw, 46px) ;}
 p{font-size: clamp(14px, 4vw, 26px)}
 
-.btn_back-to-home {
-    flex: 2;
-}
+.btn_back-to-home {flex: 2;}
 
 .back_to_home_page_btn {
     background-color: var(--sky_blue);
