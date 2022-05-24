@@ -13,4 +13,3 @@ function menuDropdown() {
         navMenu.setAttribute("aria-expanded", false);
     }
 }
-

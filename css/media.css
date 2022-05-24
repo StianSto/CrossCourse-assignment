@@ -1,15 +1,11 @@
 /* nav for smaller devices */
 @media only screen and (max-width: 1023px) {
   /*dropdown_menu*/
-    nav li:nth-child(1) {font-size: 1.2em;}
-
-    nav li:nth-child(1),
-    nav li:nth-child(5) {
-      margin-bottom: 30px;
-    }
+  #primary-nav ul * {}
 
     #primary-nav {
       background-color: var(--charcoal);
+      font-size: 2em;
       position: absolute;
       z-index: -1;
       left: 0px;
@@ -59,7 +55,6 @@
     gap: 3%;
   }
 
-  nav li:nth-child(2) {margin-left: 5%;}
   nav li:nth-child(6) {margin-left:auto;}
   nav li:nth-child(7) {margin-right:5%;}
 
