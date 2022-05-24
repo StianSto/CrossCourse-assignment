@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet">
     <title>HH Supernova</title>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,25 +26,26 @@
             </div>
             <div class="menu_wrapper">
                 <div class="hamburger-menu_header">
-                    <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
-                    <input type="checkbox" id="hamburger-menu">
-                    <nav>
-                        <ul>
-                            <li class="active"><a href="index.html">Home</a></li>
+                    <i class="fas fa-bars" aria-controls="primary-nav" aria-expanded="false"><span class="sr-only">menu</span></i>
+                </div>
+                <nav id="primary-nav" data-visible="false">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <div class="container__category">
                             <li><a href="category.html" class="product_category">Winter</a></li>
                             <li><a href="category.html" class="product_category">Hiking</a></li>
                             <li><a href="category.html" class="product_category">Camping</a></li>
                             <li><a href="category.html" class="product_category">Ocean</a></li>
-                            <li><a href="contact-us.html">Contact us</a></li>
-                            <li><a href="about-us.html">About us</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                        </div>
+                        <li><a href="contact-us.html">Contact us</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <div class="searchbar">
-            <input type="text" placeholder= "Search products"> 
             <button class="search_button"><i class="fas fa-search"></i></button>
+            <input type="text" placeholder= "Search products"> 
         </div>
     </header>
     <main>

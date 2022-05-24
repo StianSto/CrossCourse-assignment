@@ -84,7 +84,8 @@ nav ul > *, nav ul a {color: white;}
 .product_category {color: var(--sky_blue);}
 
 .container__category {
-  margin-block: 1em
+  margin: 1em;
+  display: inline-block;
 }
 
 .searchbar {
