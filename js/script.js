@@ -1,5 +1,6 @@
 const navMenuBtn = document.querySelector(".hamburger-menu_header");
 const navMenu = document.querySelector("#primary-nav");
+const bar1 = document.querySelector("#Path_23");
 
 navMenuBtn.addEventListener("click", menuDropdown);
 
@@ -12,4 +13,6 @@ function menuDropdown() {
         navMenu.setAttribute("data-visible", false);
         navMenu.setAttribute("aria-expanded", false);
     }
+
+    bar1.classList.add = "bar1-cross"
 }

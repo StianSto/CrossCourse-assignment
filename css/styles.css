@@ -48,7 +48,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px 7px;
+}
+
+.searchbar, .topnav {
+  max-width: max(1300px, 70vw);
+  margin-inline: auto;
+  padding-inline: max(10px, 2vw);
+  padding-block: 3px;
 }
 
 .logo {order: 2;}
@@ -64,14 +70,13 @@ header {
 }
 
 #primary-nav {
-  display: flex;
-  flex-flow: column;
   padding: 0;
-  align-items: center;
+  font-size: 1.5em;
 }
 
 nav ul {
   text-align: center;
+  padding: 0;
 }
 
 nav li {
@@ -88,12 +93,16 @@ nav ul > *, nav ul a {color: white;}
   display: inline-block;
 }
 
+.container__search {
+  background: var(--charcoal);
+}
+
 .searchbar {
   display: flex;
   padding: 5px 5vw;
   justify-content: center;
-  background: var(--charcoal);
   text-align: center;
+  padding-inline: max(10px, 2vw);
 }
 
 .searchbar input[type="text"] {

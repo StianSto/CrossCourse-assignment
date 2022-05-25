@@ -1,8 +1,6 @@
 /* nav for smaller devices */
 @media only screen and (max-width: 1023px) {
   /*dropdown_menu*/
-  #primary-nav ul * {}
-
     #primary-nav {
       background-color: var(--charcoal);
       font-size: 2em;
@@ -28,11 +26,9 @@
   /*header [desktop]*/
   header {
     position: relative;
-    height: 65px;
+    height: 4em;
     margin-bottom: 40px; /*pushes down main-content*/
   }
-
-  .topnav {margin: 0 5vw;}
 
   .topnav,
   .logo,
