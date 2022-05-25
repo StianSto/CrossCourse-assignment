@@ -235,3 +235,48 @@ input:checked ~ .added_to_cart {
   70% {top: 200px;}
   100% {top: -500px;}
 }
+
+.hamburger-bar {
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  position: relative;
+}
+
+.bar {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  transform-origin: center;
+  transition: all 300ms;
+}
+
+.bar--1 {
+  top: 0;
+}
+
+.bar--2, .bar--3 {
+  top: calc(50% - 2px);
+}
+
+.bar--4 {
+  bottom: 0;
+}
+.bar--1.close {
+  transform: translateY(13px) scale(0);
+}
+
+.bar--4.close {
+  transform: translateY(-13px) scale(0);
+}
+
+.bar--2.close {
+  transform: rotate(45deg);
+}
+
+.bar--3.close {
+  transform: rotate(-45deg);
+}
