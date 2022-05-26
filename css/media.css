@@ -26,11 +26,11 @@
   /*header [desktop]*/
   header {
     position: relative;
-    height: 4em;
-    margin-bottom: 40px; /*pushes down main-content*/
   }
 
-  .topnav,
+  .topnav {
+    height: 3em;
+  }
   .logo,
   .logo img {
     height: 100%;
