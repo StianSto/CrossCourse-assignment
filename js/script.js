@@ -3,16 +3,14 @@ const menuBars = document.querySelectorAll(".bar");
 const navMenu = document.querySelector("#primary-nav");
 
 navMenuBtn.addEventListener("click", () => {
-    const visible = navMenu.getAttribute("data-visible");
-    console.log(2);
-
+    const navIsVisible = navMenu.getAttribute("data-visible");
     navMenu.classList.add("animate-nav")
 
     menuBars.forEach(bar => {
         bar.classList.toggle("close")
     });
 
-    if(visible === "false") {
+    if(navIsVisible === "false") {
         navMenu.setAttribute("data-visible", true);
         navMenu.setAttribute("aria-expanded", true);
     } else {

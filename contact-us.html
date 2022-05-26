@@ -57,7 +57,7 @@
     </header>
     <main>
         <h1>Contact Us</h1>
-        <section>
+        <section class="contact-categories">
             <a href="blank-page.html">
                 <div>
                     <img src="Assets/Icons/Icon-material-payment.svg" alt="credit card icon">
@@ -78,22 +78,38 @@
             </a>
             <a href="blank-page.html">
                 <div>
-                    <img src="Assets/Icons/Icon-ionic-ios-mail.svg" alt="mail icon">
-                    <h2>E-mail</h2>
-                </div>
-            </a>
-            <a href="blank-page.html">
-                <div>
                     <img src="Assets/Icons/Icon-awesome-question.svg" alt="questionmark icon">
                     <h2>FAQ</h2>
                 </div>
             </a>
-            <a href="blank-page.html">
+            <!-- <a href="blank-page.html">
+                <div>
+                    <img src="Assets/Icons/Icon-ionic-ios-mail.svg" alt="mail icon">
+                    <h2>E-mail</h2>
+                </div>
+            </a> -->
+            <!-- <a href="blank-page.html">
                 <div>
                     <img src="Assets/Icons/Icon-awesome-exclamation.svg" alt="exclamationmark icon">
                     <h2>Tips</h2>
                 </div>
-            </a>
+            </a> -->
+        </section>
+        <section>
+            <h2>Email us:</h2>
+            <form action="/">
+                <select name="category-query" id="category-query" required>
+                    <option value="" selected disabled hidden>select category</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="payment">Payment</option>
+                    <option value="return">Return</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <textarea name="query" id="query" cols="30" rows="10" required></textarea>
+                <button type="submit">Send Email</button>
+            </form>
         </section>
         <div class="call_us_at">
             <img src="Assets/Icons/Icon-feather-phone-call_dark.svg" alt="ringing phone icon">

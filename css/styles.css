@@ -50,7 +50,7 @@ header {
 }
 
 .searchbar, .topnav {
-  max-width: max(1300px, 70vw);
+  max-width: 1300px;
   margin-inline: auto;
   padding-inline: max(10px, 2vw);
 }
@@ -92,11 +92,11 @@ nav ul > *, nav ul a {color: white;}
 
 .searchbar {
   display: flex;
-  height: fit-content;
+  /* height: fit-content;
   padding: 5px 5vw;
   justify-content: center;
   text-align: center;
-  padding-inline: max(10px, 2vw);
+  padding-inline: max(10px, 2vw); */
 }
 
 .searchbar input[type="text"] {
