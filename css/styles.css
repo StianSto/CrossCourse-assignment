@@ -6,10 +6,6 @@ body {
   font-family: arimo, Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--light_green);
   overflow-x: hidden;
-  /*flex for page layout*/
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap !important;
 }
 
 main {
@@ -34,19 +30,71 @@ a {
 /* header */
 header {
   position: sticky;
+  width: 100%;
   top: 0;
   z-index: 10;
   background: var(--mountain_green);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: fit-content;
+  transition: all 300ms;
 }
 
 /* flex nav */
 .topnav {
   display: flex;
+  height: 4rem;
   padding-block: 0.5rem;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo, .logo img, .nav-icon, .menu_wrapper {
+  height: 100%;
+}
+
+.nav-icon img {
+  width: 60%;
+}
+
+.logo {order: 2;}
+.nav-icon {
+  order: 3; 
+  display: flex;
+  position: relative;}
+.menu_wrapper {
+  order: 1;
+  z-index: 10;
+  display: flex;
+}
+
+.hamburger-menu_header {
+  height: 70%;
+  margin-block: auto;
+}
+
+.shopping-cart_icon {
+  height: 90%;
+  aspect-ratio: 1;
+  margin-block: auto;
+  color: var(--mountain_green);
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 45%;
+  aspect-ratio: 1;
+  bottom: -10%;
+  right: -10%;
+  background-color: var(--dark_orange);
+  border-radius: 50%;
 }
 
 .searchbar, .topnav {
@@ -55,16 +103,60 @@ header {
   padding-inline: max(10px, 2vw);
 }
 
-.logo {order: 2;}
-.nav-icon {order: 3;}
-.menu_wrapper {
-  order: 1;
-  z-index: 10;
-}
-
 .hamburger-menu_header {
   color: #fff;
   font-size: 1.7em;
+  aspect-ratio: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.hamburger-bar {
+  /* width: 50px; */
+  /* height: 50px; */
+  height: 100%;
+  width: 100%;
+  margin-block: auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.bar {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  border-radius: 2px;
+  background-color: white;
+  transform-origin: center;
+  transition: all 300ms;
+}
+
+.bar--1 {
+  top: 0;
+}
+
+.bar--2, .bar--3 {
+  top: calc(50% - 3px);
+}
+
+.bar--4 {
+  bottom: 0;
+}
+.bar--1.close {
+  transform: translateY(13px) scale(0);
+}
+
+.bar--4.close {
+  transform: translateY(-13px) scale(0);
+}
+
+.bar--2.close {
+  transform: rotate(45deg);
+}
+
+.bar--3.close {
+  transform: rotate(-45deg);
 }
 
 #primary-nav {
@@ -92,11 +184,7 @@ nav ul > *, nav ul a {color: white;}
 
 .searchbar {
   display: flex;
-  /* height: fit-content;
-  padding: 5px 5vw;
-  justify-content: center;
-  text-align: center;
-  padding-inline: max(10px, 2vw); */
+  padding-block: 0.5em;
 }
 
 .searchbar input[type="text"] {
@@ -231,47 +319,3 @@ input:checked ~ .added_to_cart {
   100% {top: -500px;}
 }
 
-.hamburger-bar {
-  width: 30px;
-  height: 30px;
-  flex-direction: column;
-  position: relative;
-}
-
-.bar {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: white;
-  transform-origin: center;
-  transition: all 300ms;
-}
-
-.bar--1 {
-  top: 0;
-}
-
-.bar--2, .bar--3 {
-  top: calc(50% - 2px);
-}
-
-.bar--4 {
-  bottom: 0;
-}
-.bar--1.close {
-  transform: translateY(13px) scale(0);
-}
-
-.bar--4.close {
-  transform: translateY(-13px) scale(0);
-}
-
-.bar--2.close {
-  transform: rotate(45deg);
-}
-
-.bar--3.close {
-  transform: rotate(-45deg);
-}
