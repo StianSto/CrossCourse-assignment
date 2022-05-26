@@ -6,6 +6,8 @@ navMenuBtn.addEventListener("click", () => {
     const visible = navMenu.getAttribute("data-visible");
     console.log(2);
 
+    navMenu.classList.add("animate-nav")
+
     menuBars.forEach(bar => {
         bar.classList.toggle("close")
     });

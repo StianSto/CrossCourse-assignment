@@ -11,6 +11,9 @@
       width: 100%;
       box-shadow: 2px 2px 5px rgba(59, 59, 59, 0.527);
       transform: translateY(-105%);
+    }
+
+    .animate-nav {
       transition: all ease-out 300ms;
     }
 
@@ -101,10 +104,5 @@
   .choosing-jacket p {
     font-size: 2vw;
   }
-
-  .menu_wrapper {
-    flex:1
-  }
-
   
 }

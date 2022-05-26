@@ -86,11 +86,6 @@ nav li {
 nav ul > *, nav ul a {color: white;}
 .product_category {color: var(--sky_blue);}
 
-.container__category {
-  margin: 1em;
-  display: inline-block;
-}
-
 .container__search {
   background: var(--charcoal);
 }
