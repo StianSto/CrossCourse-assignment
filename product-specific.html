@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
+    <title>HH Supernova</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Helly Hansen Supernova. durable jacket that is suited for all weather. Unisex, deep blue. ">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/product-specific.css">
-    <link rel="stylesheet" href="css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet">
-    <title>HH Supernova</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/product-specific.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -20,9 +20,6 @@
         <div class="topnav">
             <div class="logo">
                 <a href="index.html"><img src="Assets/images/Rainy-days_logo.svg" alt="logo of Rainy Days" class="logo_image"> </a>
-            </div>
-            <div class="nav-icon">
-                <a href="mycart.html" class="shopping-cart_icon"><img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon"></a>
             </div>
             <div class="menu_wrapper">
                 <div class="hamburger-menu_header">
@@ -35,22 +32,30 @@
                 </div>
                 <nav id="primary-nav" data-visible="false">
                     <ul>
-                        <div class="container__category">
+                        <span class="container__category">
                             <li><a href="category.html" class="product_category">Winter</a></li>
                             <li><a href="category.html" class="product_category">Hiking</a></li>
                             <li><a href="category.html" class="product_category">Camping</a></li>
                             <li><a href="category.html" class="product_category">Ocean</a></li>
-                        </div>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="contact-us.html">Contact us</a></li>
-                        <li><a href="about-us.html">About us</a></li>
+                        </span>
+                        <span>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                        </span>
                     </ul>
                 </nav>
+            </div>
+            <div class="nav-icon">
+                <a href="mycart.html" class="shopping-cart_icon">
+                    <img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon">
+                </a>
+                <span class="cart-count">2</span>
             </div>
         </div>
         <div class="container__search">
             <div class="searchbar">
-                <button class="search_button"><i class="fas fa-search"></i></button>
+                <button class="search_button" aria-label="search"><i class="fas fa-search"></i></button>
                 <input type="text" placeholder= "Search products"> 
             </div>
         </div>

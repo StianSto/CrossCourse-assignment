@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
+    <title>My Shopping Cart</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="my-cart" content="confirm purchase of items. input adress info, delivery method and payment method.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mycart.css">
-    <link rel="stylesheet" href="css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet">
-    <title>My Shopping Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mycart.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -20,9 +20,6 @@
         <div class="topnav">
             <div class="logo">
                 <a href="index.html"><img src="Assets/images/Rainy-days_logo.svg" alt="logo of Rainy Days" class="logo_image"> </a>
-            </div>
-            <div class="nav-icon">
-                <a href="mycart.html" class="shopping-cart_icon"><img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon"></a>
             </div>
             <div class="menu_wrapper">
                 <div class="hamburger-menu_header">
@@ -35,29 +32,37 @@
                 </div>
                 <nav id="primary-nav" data-visible="false">
                     <ul>
-                        <div class="container__category">
+                        <span class="container__category">
                             <li><a href="category.html" class="product_category">Winter</a></li>
                             <li><a href="category.html" class="product_category">Hiking</a></li>
                             <li><a href="category.html" class="product_category">Camping</a></li>
                             <li><a href="category.html" class="product_category">Ocean</a></li>
-                        </div>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="contact-us.html">Contact us</a></li>
-                        <li><a href="about-us.html">About us</a></li>
+                        </span>
+                        <span>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                        </span>
                     </ul>
                 </nav>
+            </div>
+            <div class="nav-icon">
+                <a href="mycart.html" class="shopping-cart_icon">
+                    <img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon">
+                </a>
+                <span class="cart-count">2</span>
             </div>
         </div>
         <div class="container__search">
             <div class="searchbar">
-                <button class="search_button"><i class="fas fa-search"></i></button>
+                <button class="search_button" aria-label="search"><i class="fas fa-search"></i></button>
                 <input type="text" placeholder= "Search products"> 
             </div>
         </div>
     </header>
     <main>
         <h1>My Shopping Cart</h1>
-        <form action="" method="get">
+        <form action="/checkout_success.html" method="get" id="checkout-form">
             <div class="content-wrapper">
                 <div class="cart_product_container">
                     <input type="radio" value="products_cart" name="my_shopping_cart" id="products_cart_toggle" class="toggle_btn" checked>
@@ -85,15 +90,15 @@
                     <input type="radio" value="adress_forms" name="my_shopping_cart" id="adress_forms_toggle" class="toggle_btn">
                     <label for="adress_forms_toggle" class="toggle_text"><h2>Adress Info</h2></label>
                     <div class="collapsible_content_cart adress_info_inputs">
-                        <input type="text" name="adress" id="adress" placeholder="Adress">
+                        <input type="text" name="adress" id="adress" placeholder="Adress" required>
                         <div class="adress_name">
-                            <input type="text" name="first_name" id="first_name" placeholder="First Name">
-                            <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                            <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
+                            <input type="text" name="last_name" id="last_name" placeholder="Last Name"  required>
                         </div>
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <input type="text" name="city" id="city" placeholder="City">
-                        <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
-                        <input type="tel" name="phone" id="phone" placeholder="Phone">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="text" name="city" id="city" placeholder="City" required>
+                        <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code" title="numbers only. ex: 1234" required>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone" title="numbers only. ex: 123 45 678" required>
                     </div>
                 </div>
                 <div class="delivery_container">
@@ -104,9 +109,9 @@
                                 <input type="checkbox" name="same_as_adress" id="same_as_adress">
                                 <label for="same_as_adress">Same as adress info</label>
                             </div>
-                            <input type="text" placeholder="Adress" name="adress" id="adress">
-                            <input type="text" placeholder="City" name="city" id="city">
-                            <input type="text" placeholder="Postal Code" name="postal_code" id="postal_code">
+                            <input type="text" placeholder="Adress" name="adress" id="adress" required>
+                            <input type="text" placeholder="City" name="city" id="city" required>
+                            <input type="text" placeholder="Postal Code" name="postal_code" id="postal_code" required>
                         <div>
                             <label for="delivery_method">Choose Delivery Method</label>
                             <select name="delivery_method" id="delivery_method">
@@ -121,7 +126,7 @@
                     <label for="payment_toggle" class="toggle_text"><h2>Payment</h2></label>
                     <div class="collapsible_content_cart">
                         <div>
-                            <input type="radio" value="card" id="card" name="payment_method">
+                            <input type="radio" value="card" id="card" name="payment_method" required>
                             <label for="card">Card</label>
                         </div>
                         <div>
@@ -140,7 +145,8 @@
                         <p>1 x Nike Tidalwave</p>
                     </div>
                     <p>Total $178</p>
-                    <a href="checkout_success.html" class="cta order_btn">Order</a> <!--i am simulating a form submit button here, as i can't redirect to a successful purchase page with a form submit button without using javascript it seems. -->
+                    <button type="submit" form="checkout-form" class="cta order_btn">Order</button>
+                    <!-- <a href="" type="submit" class="cta order_btn">Order</a> i am simulating a form submit button here, as i can't redirect to a successful purchase page with a form submit button without using javascript it seems. -->
                 </div>
             </div>
         </form>

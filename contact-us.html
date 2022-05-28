@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
+    <title>Contact Us - Rainy Days</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="you can contact us at Rainy Days if you have questions about delivery, return, payment or other concerns you may have. You can also find some useful tips for doing activities outdoors.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contact-us.css">
-    <link rel="stylesheet" href="css/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap" rel="stylesheet">
-    <title>Contact Us - Rainy Days</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact-us.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
+    <script src="js/contactus-form.js" defer></script>
 </head>
 <body>
     <header>
         <div class="topnav">
             <div class="logo">
                 <a href="index.html"><img src="Assets/images/Rainy-days_logo.svg" alt="logo of Rainy Days" class="logo_image"> </a>
-            </div>
-            <div class="nav-icon">
-                <a href="mycart.html" class="shopping-cart_icon"><img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon"></a>
             </div>
             <div class="menu_wrapper">
                 <div class="hamburger-menu_header">
@@ -35,22 +33,30 @@
                 </div>
                 <nav id="primary-nav" data-visible="false">
                     <ul>
-                        <div class="container__category">
+                        <span class="container__category">
                             <li><a href="category.html" class="product_category">Winter</a></li>
                             <li><a href="category.html" class="product_category">Hiking</a></li>
                             <li><a href="category.html" class="product_category">Camping</a></li>
                             <li><a href="category.html" class="product_category">Ocean</a></li>
-                        </div>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="contact-us.html">Contact us</a></li>
-                        <li><a href="about-us.html">About us</a></li>
+                        </span>
+                        <span>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                        </span>
                     </ul>
                 </nav>
+            </div>
+            <div class="nav-icon">
+                <a href="mycart.html" class="shopping-cart_icon">
+                    <img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon">
+                </a>
+                <span class="cart-count">2</span>
             </div>
         </div>
         <div class="container__search">
             <div class="searchbar">
-                <button class="search_button"><i class="fas fa-search"></i></button>
+                <button class="search_button" aria-label="search"><i class="fas fa-search"></i></button>
                 <input type="text" placeholder= "Search products"> 
             </div>
         </div>
@@ -66,14 +72,14 @@
             </a>
             <a href="blank-page.html">
                 <div>
-                    <img src="Assets/Icons/Icon-awesome-truck.svg" alt="truck icon">
-                    <h2>Delivery</h2>
+                    <img src="Assets/Icons/Icon-feather-package.svg" alt="package icon">
+                    <h2>Return</h2>
                 </div>
             </a>
             <a href="blank-page.html">
                 <div>
-                    <img src="Assets/Icons/Icon-feather-package.svg" alt="package icon">
-                    <h2>Return</h2>
+                    <img src="Assets/Icons/Icon-awesome-truck.svg" alt="truck icon">
+                    <h2>Delivery</h2>
                 </div>
             </a>
             <a href="blank-page.html">
@@ -95,9 +101,9 @@
                 </div>
             </a> -->
         </section>
-        <section>
+        <section class="form-section">
             <h2>Email us:</h2>
-            <form action="/">
+            <form action="/query-sent.html" method="" class="contact-us-form">
                 <select name="category-query" id="category-query" required>
                     <option value="" selected disabled hidden>select category</option>
                     <option value="delivery">Delivery</option>
@@ -106,9 +112,9 @@
                     <option value="other">Other</option>
                 </select>
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
-                <input type="email" name="email" id="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <input type="email" name="email" id="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="example: name@mail.com" required>
                 <textarea name="query" id="query" cols="30" rows="10" required></textarea>
-                <button type="submit">Send Email</button>
+                <button type="submit" id="submit-btn">Send Email</button>
             </form>
         </section>
         <div class="call_us_at">

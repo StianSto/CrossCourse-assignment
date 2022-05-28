@@ -8,6 +8,11 @@ body {
   overflow-x: hidden;
 }
 
+h1 {font-size: var(--large);}
+h2 {font-size: var(--medium1);}
+h3 {font-size: var(--medium2);}
+p {font-size: var(--small);}
+
 main {
   flex: 1;
   width: 100%;
@@ -301,7 +306,6 @@ select:hover {
   bottom: 5%;
   left: 0;
   right: 0;
-  font-size: clamp(16px, 2vw, 32px);
 }
 
 input:checked ~ .added_to_cart {
