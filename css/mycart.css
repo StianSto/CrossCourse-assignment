@@ -2,8 +2,22 @@ main {
   padding: 10px 10px 40px; /*pushes footer down + constrains main content on mobile*/
 }
 
+h2 {
+  margin-block: 0.5rem;
+}
+
 h3 {
-  font-size: var(--small);
+  font-size: var(--medium3);
+  width: 100%;
+  margin: 0;
+}
+
+p {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+fieldset {
+  border: none;
 }
 
 .content-wrapper img {
@@ -16,25 +30,37 @@ h3 {
   gap: 10px;
 }
 
-/* collapsible tabs */
-
-  .toggle_text {display: block;}
-  .toggle_btn, .collapsible_content_cart {display: none; transition: display 1s;}
-  .toggle_btn:checked ~ .collapsible_content_cart {display: flex;}
-
 /* products_cart - flex */
-  .products_cart_flex {flex-flow: column;}
-  .products_cart {display: flex;}
-  .products_cart img {object-fit: scale-down;} /*fixes image stretching in flex*/
-  .products_cart_info span {padding: 8px;} /*number of products. will be changed when i can implement javascript to make it work as intented.*/
+.products_cart, .products_cart_flex, .products_cart_info {
+  display: flex;
+}
+
+
+  .products_cart_flex {
+    flex-flow: column; 
+    row-gap: 3rem; 
+    margin-top: 2rem;}
+  .products_cart {display: flex; gap: 1rem;}
+  .products_cart img {object-fit: scale-down;}
+  .products_cart_info span {padding: 0.5rem;} 
   .products_cart_info {
     display: flex;
-    flex-flow: column;
-    margin-left: 10px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: clamp(300px, 10vw, 500px);
+    row-gap: 1rem;
+  }
+
+  #remove-item {
+    margin-left: auto;
   }
 
 /*adress and delivery forms*/
-  .adress_info_inputs, .delivery_inputs {flex-flow: row wrap;}
+  .adress_info_inputs, .delivery_inputs {
+    display: flex;
+    flex-flow: row wrap;
+  }
   .adress_info_inputs input, .delivery_inputs input {
     padding: 10px;
     margin: 10px;
@@ -65,6 +91,10 @@ h3 {
     transform: scale(1.5);
   }
 
+  .delivery_method--container {
+    width: 100%;
+  }
+
 /* page and elements styles */
 .content-wrapper > * {
   background: white;
@@ -78,9 +108,7 @@ h3 {
   padding: 0 5% !important;
 }
 
-.summary_mycart p {
-  font-size: clamp(14px, 2vw, 18px);
-}
+
 
 .sum_total {
   margin: 0 10vw;
@@ -104,16 +132,10 @@ h3 {
 
 @media only screen and (min-width: 768px) {
   .content-wrapper {grid-template-columns: 1fr 33%;}
-  .content-wrapper > * > * {padding-right: 40%;}
 
   .sum_total {
     grid-column: 2 / -1;
     grid-row: 1 / 5;
   }
 
-}
-
-/* temporary */
-h2 {
-  margin: 0;
 }

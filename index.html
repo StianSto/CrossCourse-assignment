@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/media.css">
     <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js" type="module" defer></script>
+    <script src="js/index.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -33,17 +34,18 @@
                 </div>
                 <nav id="primary-nav" data-visible="false">
                     <ul>
-                        <span class="container__category">
-                            <li><a href="category.html" class="product_category">Winter</a></li>
-                            <li><a href="category.html" class="product_category">Hiking</a></li>
-                            <li><a href="category.html" class="product_category">Camping</a></li>
-                            <li><a href="category.html" class="product_category">Ocean</a></li>
-                        </span>
-                        <span>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="contact-us.html">Contact us</a></li>
-                            <li><a href="about-us.html">About us</a></li>
-                        </span>
+                        <li><a href="index.html">Home</a></li>
+                        <span class="collection-container">
+                            <span>Our Collections<i class="fa fa-solid fa-caret-down"></i></span>
+                            <span class="container__category">
+                                <a href="category.html" class="product_category">Winter</a>
+                                <a href="category.html" class="product_category">Hiking</a>
+                                <a href="category.html" class="product_category">Camping</a>
+                                <a href="category.html" class="product_category">Ocean</a>
+                            </span>
+                        </span> 
+                        <li><a href="contact-us.html">Contact us</a></li>
+                        <li><a href="about-us.html">About us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -62,9 +64,6 @@
         </div>
     </header>
     <div class="hero">
-        <!-- <figure class="hero_picture">
-            <img src="Assets/images/img_hero_resized.jpg" alt="banner picture: Get ready for the slopes." class="banner-picture">
-        </figure> -->
         <div class="hero_text" role="banner">
             <h1>Get ready for <br>the slopes</h1>
             <a href="Category.html">Check it out</a>
@@ -73,228 +72,11 @@
     <main>
         <section class="featured_products">
             <h2>Get ready for Winter</h2>
-            <ul class="product_list full no-scrollbar">
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_1_transparent.png" alt="Helly Hansen Supernova, unisex, deep blue" class="product_image">               
-                            <h3>Helly Hansen - Supernova</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_2_transparent.png" alt="Nike Tidalwave men, black" class="product_image">               
-                            <h3>Nike - Tidalwave</h3>
-                            <p class="price">$99</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_3_transparent.png" alt="The North Face - Everest, women, blue and black" class="product_image">               
-                            <h3>The North Face - Everest</h3>
-                            <p class="price">$69</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_4_transparent.png" alt="Cobalt - snowtop, white, women" class="product_image">               
-                            <h3>Cobalt - Snowtop</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_5_transparent.png" alt="Adidas - Benegino unisex white" class="product_image">               
-                            <h3>Adidas - Benegino</h3>
-                            <p class="price">$89</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_1_transparent.png" alt="Helly Hansen Supernova, unisex, deep blue" class="product_image">               
-                            <h3>Helly Hansen - Supernova</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_2_transparent.png" alt="Nike Tidalwave men, black" class="product_image">               
-                            <h3>Nike - Tidalwave</h3>
-                            <p class="price">$99</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_3_transparent.png" alt="The North Face - Everest, women, blue and black" class="product_image">               
-                            <h3>The North Face - Everest</h3>
-                            <p class="price">$69</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_4_transparent.png" alt="Cobalt - snowtop, white, women" class="product_image">               
-                            <h3>Cobalt - Snowtop</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_5_transparent.png" alt="Adidas - Benegino unisex white" class="product_image">               
-                            <h3>Adidas - Benegino</h3>
-                            <p class="price">$89</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_1_transparent.png" alt="Helly Hansen Supernova, unisex, deep blue" class="product_image">               
-                            <h3>Helly Hansen - Supernova</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_2_transparent.png" alt="Nike Tidalwave men, black" class="product_image">               
-                            <h3>Nike - Tidalwave</h3>
-                            <p class="price">$99</p>
-                        </div>
-                    </a>  
-                </li>
-            </ul>
+            <ul class="product_list product_list--wintercollection full no-scrollbar"></ul>
         </section>
         <section class="featured_products">
             <h2>Popular Products</h2>
-            <ul class="product_list full no-scrollbar">
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_3_transparent.png" alt="The North Face - Everest, women, blue and black" class="product_image">               
-                            <h3>The North Face - Everest</h3>
-                            <p class="price">$69</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_4_transparent.png" alt="Cobalt - snowtop, white, women" class="product_image">               
-                            <h3>Cobalt - Snowtop</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_5_transparent.png" alt="Adidas - Benegino unisex white" class="product_image">               
-                            <h3>Adidas - Benegino</h3>
-                            <p class="price">$89</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_1_transparent.png" alt="Helly Hansen Supernova, unisex, deep blue" class="product_image">               
-                            <h3>Helly Hansen - Supernova</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_2_transparent.png" alt="Nike Tidalwave men, black" class="product_image">               
-                            <h3>Nike - Tidalwave</h3>
-                            <p class="price">$99</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_3_transparent.png" alt="The North Face - Everest, women, blue and black" class="product_image">               
-                            <h3>The North Face - Everest</h3>
-                            <p class="price">$69</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_4_transparent.png" alt="Cobalt - snowtop, white, women" class="product_image">               
-                            <h3>Cobalt - Snowtop</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html">
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_5_transparent.png" alt="Adidas - Benegino unisex white" class="product_image">               
-                            <h3>Adidas - Benegino</h3>
-                            <p class="price">$89</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_1_transparent.png" alt="Helly Hansen Supernova, unisex, deep blue" class="product_image">               
-                            <h3>Helly Hansen - Supernova</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_2_transparent.png" alt="Nike Tidalwave men, black" class="product_image">               
-                            <h3>Nike - Tidalwave</h3>
-                            <p class="price">$99</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_1_transparent.png" alt="Helly Hansen Supernova, unisex, deep blue" class="product_image">               
-                            <h3>Helly Hansen - Supernova</h3>
-                            <p class="price">$79</p>
-                        </div>
-                    </a>  
-                </li>
-                <li class="product">
-                    <a href="product-specific.html"> 
-                        <div class="product-item product-upright">
-                            <img src="Assets/images/product_2_transparent.png" alt="Nike Tidalwave men, black" class="product_image">               
-                            <h3>Nike - Tidalwave</h3>
-                            <p class="price">$99</p>
-                        </div>
-                    </a>  
-                </li>
+            <ul class="product_list product_list--popular full no-scrollbar">
             </ul>
         </section>
         <div class="blog-items_box">

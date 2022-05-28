@@ -32,12 +32,23 @@
   /*header [desktop]*/
   .logo {order: 1;}
 
+  .menu_wrapper {
+    margin-inline: auto 2rem;
+  }
+
+  .container__category {
+    position: absolute;
+    width: calc(100% - var(--paddingCollection) * 2);
+  }
+
   nav li {display: inline-block;}
   .hamburger-menu_header {display: none;}
   nav ul {
-    flex-flow: row wrap;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
     justify-content: space-between;
-    width: 45vw;
+    width: 100%;
   }
 
   nav, nav ul {
@@ -47,6 +58,7 @@
   /* Home page */
   main {
     max-width: 70%;
+    min-width: 1000px;
     margin: 0 auto;
   }
 

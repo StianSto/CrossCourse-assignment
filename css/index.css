@@ -29,10 +29,19 @@ body {
 
 h1 {
   font-size: clamp(24px, 5vw, 80px);
-  /* width: 60%; */
   color: var(--charcoal);
   font-family: open sans;
   text-transform: uppercase;
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--medium3);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--small);
   margin: 0;
 }
 
