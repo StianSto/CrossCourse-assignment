@@ -7,36 +7,46 @@ body {
 }
 
 /* hero */
-.hero_picture {
+.hero {
+  position: relative;
   width: 100%;
-  margin: 0;
-}
-
-.hero_picture img {
-  object-fit: cover;
-  transform-origin: right;
-  max-height: 800px;
+  height: fit-content;
+  background: url(../Assets/images/img_hero_resized.jpg) no-repeat right;
+  background-size: cover;
+  background-position: 65% 0%;
 }
 
 .hero_text {
-  right: 0;
-  padding: 5vw;
-  position: absolute;
-  top: 100px;
-  text-align: right;
-  width: clamp(170px, 35vw, 40vw);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-inline: auto 4vw;
+  padding-block: 2em;
+  aspect-ratio: 7 / 2;
   max-height: 60vh;
+  text-align: right;
 }
 
 h1 {
-  font-size: clamp(20px, 5vw, 80px);
+  font-size: clamp(24px, 5vw, 80px);
   color: var(--charcoal);
   font-family: open sans;
   text-transform: uppercase;
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--medium3);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--small);
+  margin: 0;
 }
 
 .hero_text a {
-  font-size: clamp(14px, 1vw, 60px);
+  font-size: clamp(14px, 2vw, 60px);
   max-height: 60vh;
   color: white;
   background-color: var(--dark_orange);

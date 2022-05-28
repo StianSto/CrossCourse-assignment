@@ -1,5 +1,6 @@
-h1 {margin: 5px 10px;}
+h1 {margin: 5rem 10px 1rem;}
 h2 {margin: auto 0 auto 20px;}
+h3 {font-size: var(--medium3);}
 
 .filter_bar {
   display: flex;
@@ -23,7 +24,7 @@ select {
   border-right: none;
   background-color: rgb(245, 245, 245);
   border-color: var(--clay_green);
-  font-size: clamp(14px, 1vw, 26px);
+  font-size: var(--small);
   padding: 10px;
 }
 
