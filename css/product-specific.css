@@ -1,22 +1,36 @@
-main {margin: 100px auto !important;}
+main {
+    margin: 100px auto !important;
+}
+
+h1 {
+    margin: 0;
+}
 
 .product_specific_card{
     display: flex;
     margin: 0 auto;
     flex-flow: column;
-    max-width: 500px;
     background: white;
-    padding: 40px 30px 40px;
+    /* padding: 40px 30px 40px; */
 }
 
-.product_specific_card > img{
-    margin-top: -80px;
-    width: 100%;
-    max-width: 500px;
+.product-img {
+    display: flex;
+    background-color: white;
+    position: relative;
+    inset: -40px 0;
+    width: 70%;
+    margin-inline: auto;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
 }
 
+.product-img img {
+    width: 100%;
+    object-fit: scale-down;
+}
+
 .wrapper_product_specific {
+    width: fit-content;
     display: grid;
     align-items: center;
     grid-template-areas: 
@@ -25,7 +39,7 @@ main {margin: 100px auto !important;}
     "select_size select_size"
     "info info"
     "product_price cta";
-    min-width: 200px;
+    padding: 1rem;
 }
 
 .wrapper_product_specific h1 {grid-area: product_name;}
@@ -53,7 +67,7 @@ main {margin: 100px auto !important;}
     .product_collapsible_box {
         display: grid;
         margin: 30px auto;
-        max-width: 560px;
+        width: 100%;
         grid-template-rows: repeat(minmax(autofit,0));
         grid-template-areas: 
         "specifications"
@@ -94,11 +108,10 @@ main {margin: 100px auto !important;}
     }
 
 
-@media only screen and (min-width: 1024px) {
-    main {min-width: 840px !important; } /*overlap fix */
-
+@media only screen and (min-width: 769px) {
     .content_wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -106,15 +119,17 @@ main {margin: 100px auto !important;}
         flex-flow: row;
         margin: 0 auto;
         min-width: 750px;
-        max-width: 1000px;
         gap: 5%;
+    }
+
+    .product-img {
+    inset: -40px 30px;
+    width: fit-content;
     }
 
     .product_collapsible_box {
         grid-template-areas: 
         "specifications availability size_guide other"
         "box box box box";
-        min-width: 810px;
-        max-width: 1060px;
     }
 }

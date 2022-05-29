@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 
-h1 {font-size: var(--large);}
+h1 {font-size: var(--large2);}
 h2 {font-size: var(--medium1);}
 h3 {font-size: var(--medium2);}
 p {font-size: var(--small);}
@@ -117,8 +117,6 @@ header {
 }
 
 .hamburger-bar {
-  /* width: 50px; */
-  /* height: 50px; */
   height: 100%;
   width: 100%;
   margin-block: auto;
@@ -176,44 +174,55 @@ nav ul {
 
 nav li, .collection-container {
   list-style: none;
-  padding: 4px 0;
+  padding: 0.75rem;
+}
+
+nav ul > *, nav ul a {
+  color: white; 
+  transition: all 200ms;
+  font-size: 1.5rem;}
+
+
+
+nav ul > *.active, nav ul a.active {
+  text-decoration: underline;
+}
+
+.collection-container {
+  display: inline-block;
+  position: relative;
 }
 
 .collection-container:hover {
   cursor: pointer;
 }
 
-nav ul > *, nav ul a {color: white; font-size: 1.25rem;}
-
-.collection-container {
-  position: relative;
-  padding: var(--paddingCollection);
-}
-
-.collection-container--visible {
-  background-color: var(--charcoal);
-}
-
 .container__category {
   display: none;
   flex-direction: column;
-  gap: 0.5rem;
   align-items: center;
   --paddingCollection: 1rem; 
   padding: var(--paddingCollection);
   text-align: left;
-  background-color: var(--charcoal);
+  transform-origin: top;
+  transform: scaleY(0);
   top: 100%;
   left: 0;
+  transition: all 100ms;
 }
 
-.container__category--visible {
+.collection-container:hover .container__category {
   display: flex;
+  transform: scaleY(1);
 }
 
 .product_category {
+  text-align: center;
   color: var(--sky_blue);
+  padding-block: 0.25rem;
+  width: 100%;
 }
+
 
 .container__search {
   background: var(--charcoal);
@@ -241,6 +250,13 @@ nav ul > *, nav ul a {color: white; font-size: 1.25rem;}
 
 
 /* main */
+.breadcrumb-trail {
+  font-size: 1.25rem;
+  margin: 1rem 2rem;
+}
+.breadcrumb:hover {
+  text-decoration: underline;
+}
 
 .product {
   background: white;

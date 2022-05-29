@@ -24,14 +24,6 @@ navMenuBtn.addEventListener("click", () => {
     })
 });
 
-const collectionContainer = document.querySelector(".collection-container");
-const categoryContainer = document.querySelector(".container__category");
-collectionContainer.addEventListener("click", () => {
-    console.log(2);
-    collectionContainer.classList.toggle("collection-container--visible");
-    categoryContainer.classList.toggle("container__category--visible");
-}) 
-
 
 // this code is inpsired by w3schools : https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
 var prevScrollpos = window.pageYOffset;
