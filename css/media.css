@@ -35,12 +35,7 @@
   .menu_wrapper {
     margin-inline: auto 2rem;
   }
-
-  .container__category {
-    position: absolute;
-    width: calc(100% - var(--paddingCollection) * 2);
-  }
-
+  
   nav li {display: inline-block;}
   .hamburger-menu_header {display: none;}
   nav ul {
@@ -48,13 +43,35 @@
     align-items: center;
     gap: 2rem;
     justify-content: space-between;
-    width: 100%;
+    margin: 0;
+    height: 100%;
   }
-
+  
+  nav ul > *, nav ul a {color: white; font-size: 1.25rem;}
+  nav ul > *:hover, nav ul a:hover{
+    background-color: #07242c;
+  }
+  
   nav, nav ul {
     width: 100%;
   }
+  
+  .container__category {
+    display: flex;
+    position: absolute;
+    width: calc(100% - var(--paddingCollection) * 2);
+    background-color: #07242c;
+  }
 
+  .product_category {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .product_category:hover {
+    background-color: var(--mountain_green);
+  }
+  
   /* Home page */
   main {
     max-width: 70%;

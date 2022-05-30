@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="css/media.css">
     <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
+    <!-- Hotjar Tracking Code for https://animated-chebakia-dc5194.netlify.app/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2994602,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
 </head>
 <body>
     <header>
@@ -32,7 +43,9 @@
                 </div>
                 <nav id="primary-nav" data-visible="false">
                     <ul>
-                        <span class="collection-container">
+                        <li><a href="index.html">Home</a></li>
+                        <div class="collection-container">
+
                             <span>Our Collections<i class="fa fa-solid fa-caret-down"></i></span>
                             <span class="container__category">
                                 <a href="category.html" class="product_category">Winter</a>
@@ -40,12 +53,9 @@
                                 <a href="category.html" class="product_category">Camping</a>
                                 <a href="category.html" class="product_category">Ocean</a>
                             </span>
-                        </span> 
-                        <span>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="contact-us.html">Contact us</a></li>
-                            <li><a href="about-us.html">About us</a></li>
-                        </span>
+                        </div> 
+                        <li><a href="contact-us.html">Contact us</a></li>
+                        <li><a href="about-us.html">About us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -63,10 +73,13 @@
             </div>
         </div>
     </header>
+    <div class="breadcrumb-trail"><a href="/index.html" class="breadcrumb">Home</a><span> > </span><a href="/category.html" class="breadcrumb">Products</a><span> > </span>Product</div>
     <main>
         <div class="content_wrapper">
             <div class="product_specific_card">
-                <img src="Assets/images/specific product/product_1@3x.jpg" alt="picture of product. The product is a jacket in blue, white and black.">
+                <div class="product-img">
+                    <img src="assets/images/specific_product/product_1@3x.jpg" alt="picture of product. The product is a jacket in blue, white and black.">
+                </div>
                 <div class="wrapper_product_specific">
                     <h1>Helly Hansen Supernova</h1>
                     <div class="stars">
@@ -84,49 +97,44 @@
                         <option value="large">Large</option>
                         <option value="xl">XL</option>
                     </select>
-                    <p class="product_specific_info">Lorem, ipsum dolor sit deserunt quam cum incidunt, est repudiandae ducimus quisquam magnam assumenda corporis, molestias architecto!</p>
+                    <p class="product_specific_info">Lorem, ipsum dolor sit deserunt quam cum incidunt, est repudiandae ducimus quisquam magnam assumenda corporis, molestias architectoLorem, ipsum dolor sit deserunt quam cum incidunt, est repudiandae ducimus quisquam magnam assumenda corporis, molestias architecto!</p>
                     <h2>$ 79</h2>
-                    <label class="cta" for="add_to_cart_toggle">Add to Cart</label>
-                    <input type="checkbox" id="add_to_cart_toggle">
-                    <div class="added_to_cart">
-                        <img src="Assets/Icons/001-shopping-cart.svg" alt="shopping cart icon">
-                        <p>Added to cart</p>
-                    </div>
+                    <button type="button" class="cta add-to-cart">Add to Cart</button>
                 </div>
             </div>
-        </div>
-        <div class="product_collapsible_box">
-            <input type="radio" name="toggle" class="toggle1" id="specifications">
-            <label for="specifications" class="toggle_text">Spesifications</label>
-            <input type="radio" name="toggle" class="toggle2" id="availability">
-            <label for="availability" class="toggle_text">Availability</label>
-            <input type="radio" name="toggle" class="toggle3" id="size_guide">
-            <label for="size_guide" class="toggle_text">Size </label>
-            <input type="radio" name="toggle" class="toggle4" id="other">
-            <label for="other" class="toggle_text">Other</label>
-            <div class="collapsible_content1">
-                <article>
-                    <h2>Specifications</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
-                </article>
-            </div>
-            <div class="collapsible_content2">
-                <article>
-                    <h2>Availability</h2>
-                    <p>availability ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
-                </article>
-            </div>
-            <div class="collapsible_content3">
-                <article>
-                    <h2>Size Guide</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
-                </article>
-            </div>
-            <div class="collapsible_content4">
-                <article>
-                    <h2>Other</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
-                </article>
+            <div class="product_collapsible_box">
+                <input type="radio" name="toggle" class="toggle1" id="specifications">
+                <label for="specifications" class="toggle_text">Specifications</label>
+                <input type="radio" name="toggle" class="toggle2" id="availability">
+                <label for="availability" class="toggle_text">Availability</label>
+                <input type="radio" name="toggle" class="toggle3" id="size_guide">
+                <label for="size_guide" class="toggle_text">Size </label>
+                <input type="radio" name="toggle" class="toggle4" id="other">
+                <label for="other" class="toggle_text">Other</label>
+                <div class="collapsible_content1">
+                    <article>
+                        <h2>Specifications</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
+                    </article>
+                </div>
+                <div class="collapsible_content2">
+                    <article>
+                        <h2>Availability</h2>
+                        <p>availability ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
+                    </article>
+                </div>
+                <div class="collapsible_content3">
+                    <article>
+                        <h2>Size Guide</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
+                    </article>
+                </div>
+                <div class="collapsible_content4">
+                    <article>
+                        <h2>Other</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sed corporis dolore cum tempore nam blanditiis et consequatur aliquam adipisci?</p>
+                    </article>
+                </div>
             </div>
         </div>
     </main>

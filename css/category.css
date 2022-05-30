@@ -37,18 +37,17 @@ select {
 }
 
 .product {min-width: 180px;}
-.product-item {flex-flow: row;}
+.product-item {flex-flow: row; gap: 0;}
 .product-item img {
   flex: 1;
   max-width: 120px;
-  gap: 5px;
+  object-fit: scale-down;
 }
 
 .product-item div {
   flex: 1;
   display: grid;
   grid-template-rows: auto auto;
-  padding: 0 20px;
 }
 
 .product-item div p {
@@ -60,7 +59,10 @@ select {
 /*upright card*/
 @media only screen and (min-width: 768px) {
   .product-item {flex-flow: column;}
-  .product-item img {max-width: none;}
+  .product-item img {
+    max-width: none; 
+    object-fit: cover;
+  }
 }
 
 /*grid theme layout*/
