@@ -222,8 +222,6 @@ nav ul > *.active, nav ul a.active {
   padding-block: 0.25rem;
   width: 100%;
 }
-
-
 .container__search {
   background: var(--charcoal);
 }
@@ -348,6 +346,7 @@ select:hover {
   position: absolute;
   top: -1rem;
   right: 10px;
+
 }
 
 .add-to-cart__modal img {

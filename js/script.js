@@ -27,6 +27,7 @@ navMenuBtn.addEventListener("click", () => {
 
 // this code is inpsired by w3schools : https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
 var prevScrollpos = window.pageYOffset;
+
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > "120") {
@@ -38,7 +39,6 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 }
-
 
 const addToCartBtn = document.querySelector(".add-to-cart");
 addToCartBtn.addEventListener("click", addedToCart);
@@ -68,4 +68,3 @@ function addedToCart() {
         }, 5000);
     }, 1);
 }
-
