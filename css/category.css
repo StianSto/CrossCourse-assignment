@@ -59,7 +59,10 @@ select {
 /*upright card*/
 @media only screen and (min-width: 768px) {
   .product-item {flex-flow: column;}
-  .product-item img {max-width: none;}
+  .product-item img {
+    max-width: none; 
+    object-fit: cover;
+  }
 }
 
 /*grid theme layout*/

@@ -1,5 +1,4 @@
 import {products} from '/js/components/products.js';
-console.log(products)
 
 const winterCollectionProductsList = document.querySelector(".product_list--wintercollection")
 const popularProductsList = document.querySelector(".product_list--popular")

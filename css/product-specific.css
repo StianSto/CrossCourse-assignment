@@ -6,6 +6,11 @@ h1 {
     margin: 0;
 }
 
+.content_wrapper {
+    max-width: 1300px;
+    margin-inline: auto
+}
+
 .product_specific_card{
     display: flex;
     margin: 0 auto;
