@@ -46,14 +46,27 @@ fieldset {
   .products_cart_info {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: clamp(300px, 10vw, 500px);
     row-gap: 1rem;
   }
 
-  #remove-item {
+  .item-count {
+    margin-right: 3em;
+  }
+
+  .item-price {
+    font-size: 1.5em;
+  }
+
+  .remove-item {
     margin-left: auto;
+  }
+
+  .remove-item:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 
 /*adress and delivery forms*/

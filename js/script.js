@@ -1,3 +1,8 @@
+import {products} from '/js/components/products.js';
+
+let shoppingCartArr = [];
+shoppingCartArr = JSON.parse(localStorage.getItem('shoppingCart'));
+
 const navMenuBtn = document.querySelector(".hamburger-menu_header");
 const menuBars = document.querySelectorAll(".bar");
 const navMenu = document.querySelector("#primary-nav");
@@ -40,14 +45,19 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 }
 
-const addToCartBtn = document.querySelector(".add-to-cart");
-addToCartBtn.addEventListener("click", addedToCart);
+function addedToCart(e) {
+    const addProductId = parseInt(e.target.dataset.product)
+    const addProduct = products.find((product => product.id === addProductId))
 
-function addedToCart() {
+    shoppingCartArr.push(addProduct);
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartArr))
+    updateCartCount();
+
+
     const addToCartModal = document.createElement("div");
     addToCartModal.classList.add("add-to-cart__modal");
     addToCartModal.innerHTML = `
-        <img src="/Assets/images/product_1.jpg" alt="">
+        <img src="${addProduct.img}" alt="">
         <div class="add-to-cart__modal--text">
             <p>Item has been added to your cart</p>
             <button class="cta"><a href="/mycart.html">go to cart</a></button>
@@ -68,3 +78,19 @@ function addedToCart() {
         }, 5000);
     }, 1);
 }
+
+function updateCartCount() {    
+    const cartCount = document.querySelector(".cart-count");
+
+    if(shoppingCartArr.length > 0) {
+        cartCount.style.display = "flex"
+    }
+
+
+    const cartArr =  JSON.parse(localStorage.getItem('shoppingCart'));
+    cartCount.innerHTML = cartArr.length;
+}
+updateCartCount();
+
+export {addedToCart}
+export {updateCartCount}

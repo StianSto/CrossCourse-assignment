@@ -5,7 +5,7 @@ const popularProductsList = document.querySelector(".product_list--popular")
 
 products.forEach(product => {
     let html = `<li class="product">
-    <a href="product-specific.html"> 
+    <a href="product-specific.html?id=${product.id}"> 
         <div class="product-item product-upright">
             <img src="${product.img}" alt="${product.altDescr}" class="product_image">               
             <div>
