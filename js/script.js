@@ -1,7 +1,10 @@
 import {products} from '/js/components/products.js';
 
 let shoppingCartArr = [];
-shoppingCartArr = JSON.parse(localStorage.getItem('shoppingCart'));
+let localCart = JSON.parse(localStorage.getItem('shoppingCart'));
+if(localCart) {
+    shoppingCartArr = localCart
+}
 
 const navMenuBtn = document.querySelector(".hamburger-menu_header");
 const menuBars = document.querySelectorAll(".bar");
@@ -90,7 +93,7 @@ function updateCartCount() {
     const cartArr =  JSON.parse(localStorage.getItem('shoppingCart'));
     cartCount.innerHTML = cartArr.length;
 }
-updateCartCount();
+// updateCartCount();
 
 export {addedToCart}
 export {updateCartCount}
