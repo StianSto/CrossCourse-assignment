@@ -4,6 +4,13 @@ main {
 
 h2 {
   margin-block: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+h2 span {
+  flex: 1;
 }
 
 h3 {
@@ -13,7 +20,7 @@ h3 {
 }
 
 p {
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(16px, 2vw, 18px);
 }
 
 fieldset {
@@ -22,6 +29,11 @@ fieldset {
 
 .content-wrapper img {
   width: 100px;
+}
+
+input:disabled {
+  background-color: rgb(211, 211, 211);
+  cursor: default;
 }
 
 .content-wrapper {
@@ -44,7 +56,6 @@ fieldset {
   .products_cart img {object-fit: scale-down;}
   .products_cart_info span {padding: 0.5rem;} 
   .products_cart_info {
-    display: flex;
     flex-flow: row wrap;
     align-items: center;
     width: 100%;
@@ -80,15 +91,15 @@ fieldset {
     border: var(--charcoal) solid 1px;
   }
 
-  #adress {width: 100%;}
+  #adress, #delivery-adress {width: 100%;}
 
-  .adress_name {
+  .address_info--sub-field {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
   }
 
-  #email, #city, .adress_name > * {
+  .address_info--sub-field > * {
     flex: 1;
     width: 100%;
     min-width: 20ch;
@@ -114,33 +125,55 @@ fieldset {
   padding: 10px;
 }
 
-.summary_mycart {
-  font-size: clamp(14px, 1vw, 26px);
-  text-align: left;
-  margin-left: 20px;
-  padding: 0 5% !important;
+[data-collapse] {
+  transform-origin: top;
+  animation: appear 200ms ease-in-out forwards;
 }
 
+.collapse--box {
+  display: none;
+}
 
+@keyframes appear {
+  0%{display: none;}
+  1%{
+    display: flex;
+    transform: rotateX(90deg);
+  }
+  100%{transform: rotatex(0);}
+}
 
 .sum_total {
-  margin: 0 10vw;
   width: 100%;
-  max-width: 80vw;
-  min-width: fit-content;
   font-size: 2em;
-  text-align: center;
   padding: 30px 0 !important;
-  justify-self: center;
+}
+
+.summary_mycart {
+  width: fit-content;
+  text-align: left;
+  margin-left: 2rem;
 }
 
 .order_btn {
   padding: 15px 30px !important;
-  font-size: 70%;
+  font-size: 1.5rem;
+  margin-left: 2rem;
 }
 
-.sum_total p {
-  padding: 0 !important
+.sum_total_price {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.fa-check {
+  color: white;
+  margin-left: auto;
+  background-color: green;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 0.5em;
+  margin-left: 1em;
 }
 
 @media only screen and (min-width: 768px) {

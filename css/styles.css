@@ -6,6 +6,7 @@ body {
   font-family: arimo, Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--light_green);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 h1 {font-size: var(--large2);}
@@ -304,9 +305,14 @@ footer {
   text-transform: uppercase;
   width: fit-content;
   background-color: var(--dark_orange);
-  border: none;
+  border: var(--dark_orange) 2px solid;
   color: white;
   justify-self: end;
+}
+
+.cta--alt {
+  background-color: var(--sky_blue);
+  border: var(--sky_blue) 2px solid;
 }
 
 .cta:hover {
@@ -315,6 +321,11 @@ footer {
   font-weight: bold;
   color: var(--dark_orange);
   cursor: pointer;
+}
+
+.cta--alt:hover {
+  color: black;
+  border: var(--sky_blue) 2px solid;
 }
 
 .toggle_text:hover,
@@ -355,4 +366,12 @@ select:hover {
 
 .add-to-cart__modal--text {
   font-size: 1.25rem;
+}
+
+.add-to-cart__modal a{
+  color: white;
+}
+
+.add-to-cart__modal a:hover{
+  color: var(--dark_orange);
 }

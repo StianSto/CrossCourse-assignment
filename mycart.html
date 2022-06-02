@@ -79,52 +79,39 @@
         <form action="/checkout_success.html" method="get" id="checkout-form">
             <div class="content-wrapper">
                 <fieldset form="checkout-form" class="cart_product_container">
-                    <h2>Products</h2>
-                    <div class="products_cart_flex">
-                        <!-- <div class="products_cart">
-                            <img src="Assets/images/product_1.jpg" alt="black jacket. man poses in the black jacket in front of a blue sky">
-                            <div class="products_cart_info">
-                                <h3>Helly Hansen Supernova</h3>
-                                <p><span>-</span><span class="item-count">2</span><span>+</span></p>
-                                <p>$ 99</p>
-                            </div>
-                            <span id="remove-item">remove</span>
-                        </div>
-                        <div class="products_cart">
-                            <img src="Assets/images/product_2.jpg" alt="black jacket. man poses in the black jacket in front of a blue sky">
-                            <div class="products_cart_info">
-                                <h3>Nike Tidalwave</h3>
-                                <p><span type="span">-</span><span class="item-count">1</span><span>+</span></p>
-                                <p>$ 79</p>
-                            </div>
-                            <span id="remove-item">remove</span>
-                        </div> -->
+                    <h2 data-headercollapse="1">Products<i class="fa fa-solid"></i></h2>
+                    <div class="products_cart_flex" data-collapse="1">
                     </div>
                 </fieldset>
                 <fieldset form="checkout-form" class="adress_info_container">
-                    <h2>Adress Info</h2>
-                    <div class=" adress_info_inputs">
-                        <input type="text" name="adress" id="adress" placeholder="Adress">
-                        <div class="adress_name">
-                            <input type="text" name="first_name" id="first_name" placeholder="First Name">
-                            <input type="text" name="last_name" id="last_name" placeholder="Last Name" >
+                    <h2 data-headercollapse="2">Adress Info</h2>
+                    <div class="collapse--box" data-collapse="2">
+                        <div class="adress_info_inputs">
+                            <div class="address_info--sub-field">
+                                <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                                <input type="text" name="last_name" id="last_name" placeholder="Last Name" >
+                            </div>
+                            <input type="text" name="adress" id="adress" placeholder="Adress">
+                        <div class="address_info--sub-field">
+                            <input type="text" name="city" id="city" placeholder="City">
+                            <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code" title="numbers only. ex: 1234">
                         </div>
                         <input type="email" name="email" id="email" placeholder="Email">
-                        <input type="text" name="city" id="city" placeholder="City">
-                        <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code" title="numbers only. ex: 1234">
                         <input type="tel" name="phone" id="phone" placeholder="Phone" title="numbers only. ex: 123 45 678">
+                        </div>
+                        <div class="cta cta--alt" id="continue" data-next-collapse="2">Continue</div>
                     </div>
                 </fieldset>
                 <fieldset form="checkout-form" class="delivery_container">
-                    <h2>Delivery</h2>
-                    <div class="delivery_inputs">
+                    <h2 data-headercollapse="3">Delivery</h2>
+                    <div class="delivery_inputs collapse--box" data-collapse="3">
                             <div>
                                 <input type="checkbox" name="same_as_adress" id="same_as_adress">
                                 <label for="same_as_adress">Same as adress info</label>
                             </div>
-                            <input type="text" placeholder="Adress" name="adress" id="adress">
-                            <input type="text" placeholder="City" name="city" id="city">
-                            <input type="text" placeholder="Postal Code" name="postal_code" id="postal_code">
+                            <input type="text" placeholder="Adress" name="adress" id="delivery-adress">
+                            <input type="text" placeholder="City" name="city" id="delivery-city">
+                            <input type="text" placeholder="Postal Code" name="postal_code" id="delivery-postal_code">
                         <div class="delivery_method--container">
                             <label for="delivery_method">Choose Delivery Method</label>
                             <select name="delivery_method" id="delivery_method">
@@ -132,11 +119,12 @@
                                 <option value="express">Express (1-2 days)</option>
                             </select>
                         </div>
+                        <div class="cta cta--alt" id="continue" data-next-collapse="3">Continue</div>
                     </div>
                 </fieldset>
                 <fieldset form="checkout-form" class="payment_container">
-                    <h2>Payment</h2>
-                    <div class="">
+                    <h2 data-headercollapse="4">Payment</h2>
+                    <div class="payment_inputs collapse--box" data-collapse="4">
                         <div>
                             <input type="radio" value="card" id="card" name="payment_method">
                             <label for="card">Card</label>
@@ -153,10 +141,10 @@
                 </fieldset>
                 <div class="sum_total">
                     <div class="summary_mycart"> 
-                        <p>1 x Helly Hansen Supernova</p>
-                        <p>1 x Nike Tidalwave</p>
+                        <!-- <p>1 x Helly Hansen Supernova</p>
+                        <p>1 x Nike Tidalwave</p> -->
                     </div>
-                    <p>Total $178</p>
+                    <p class="sum_total_price">Total $178</p>
                     <button type="submit" form="checkout-form" class="cta order_btn">Order</button>
                     <!-- <a href="" type="submit" class="cta order_btn">Order</a> i am simulating a form submit button here, as i can't redirect to a successful purchase page with a form submit button without using javascript it seems. -->
                 </div>

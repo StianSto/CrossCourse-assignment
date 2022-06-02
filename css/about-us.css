@@ -3,7 +3,8 @@ main {
   max-width: none !important;
 }
 section {
-  padding: 30px 20px;
+  margin-block: 1rem;
+  padding-inline: 1rem;
 }
 
 /* About us - Main */
@@ -64,12 +65,13 @@ article {
 /* section: pushing our comfort zone */
 .logo_about_us {
   width: 50%;
+  min-width: 200px;
   margin: 10% auto;
 }
 
 @media only screen and (min-width: 1024px) {
   section {
-    max-width: 60%;
+    max-width: 1000px;
     margin: 0 auto;
   }
 }

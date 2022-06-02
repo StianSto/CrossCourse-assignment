@@ -52,7 +52,7 @@ select {
 
 .product-item div p {
   align-self: flex-end;
-  width: min-content;
+  width: fit-content;
 }
 
 /* media queries */

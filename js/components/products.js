@@ -28,7 +28,7 @@ const prod2 = {
 
 const prod3 = {
     id: 3,
-    img: "../../Assets/images/product_3.jpg",
+    img: "../../Assets/images/product_3_transparent.png",
     brandName: "The North Face",
     productName: "Everest",
     price: "69",

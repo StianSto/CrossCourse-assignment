@@ -3,7 +3,7 @@ import {products} from '/js/components/products.js';
 let shoppingCartArr = [];
 let localCart = JSON.parse(localStorage.getItem('shoppingCart'));
 if(localCart) {
-    shoppingCartArr = localCart
+    shoppingCartArr = localCart;
 }
 
 const navMenuBtn = document.querySelector(".hamburger-menu_header");
@@ -63,7 +63,7 @@ function addedToCart(e) {
         <img src="${addProduct.img}" alt="">
         <div class="add-to-cart__modal--text">
             <p>Item has been added to your cart</p>
-            <button class="cta"><a href="/mycart.html">go to cart</a></button>
+            <a class="cta" href="/mycart.html" style="font-size: 1rem;">go to cart</a>
         </div>
     `
     const contentWrapper = document.querySelector(".content_wrapper");
@@ -89,11 +89,12 @@ function updateCartCount() {
         cartCount.style.display = "flex"
     }
 
-
-    const cartArr =  JSON.parse(localStorage.getItem('shoppingCart'));
-    cartCount.innerHTML = cartArr.length;
+    const cartArr = JSON.parse(localStorage.getItem('shoppingCart'));
+    if (cartArr) {
+        cartCount.innerHTML = cartArr.length;
+    }
 }
-// updateCartCount();
+updateCartCount();
 
 export {addedToCart}
 export {updateCartCount}

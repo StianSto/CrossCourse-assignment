@@ -31,10 +31,11 @@ h1 {
 
 .product-img img {
     width: 100%;
-    object-fit: scale-down;
+    object-fit: cover;
 }
 
 .wrapper_product_specific {
+    flex: 1;
     width: fit-content;
     display: grid;
     align-items: center;
@@ -130,6 +131,8 @@ h1 {
     .product-img {
     inset: -40px 30px;
     width: fit-content;
+    min-width: 30%;
+    aspect-ratio: 2 / 3;
     }
 
     .product_collapsible_box {
