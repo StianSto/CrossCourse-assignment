@@ -2,7 +2,16 @@ import {products} from '/js/components/products.js';
 import {updateCartCount} from '/js/script.js';
 
 const myCartForm = document.querySelector("form");
-myCartForm.onsubmit = function(e) {e.preventDefault();};
+myCartForm.onsubmit = function(e) {
+    e.preventDefault();
+
+    if(!validateAddressInfo() || !validateDeliveryInfo() || !validatePayment()) {
+        console.log(2)
+        return;
+    }
+
+    window.location.replace("../checkout_success.html");
+};
 
 const cartProductContainer = document.querySelector(".products_cart_flex");
 
@@ -173,8 +182,6 @@ function validateAddressInfo() {
 
     let inputIsValid = true;
 
-    
-    
     function validateInputExists(input) {
         if(!input.value.length > 0) {
             inputIsValid = false;
@@ -223,7 +230,8 @@ function validateAddressInfo() {
         const addressIsGood = document.querySelector('[data-headercollapse="2"] .fa');
         addressIsGood.classList.add("fa-check")
         return true;
-    }return false
+    }
+    return false;
 }
 
 // validate Delivery Info
@@ -287,7 +295,7 @@ function validateDeliveryInfo() {
     if(deliveryInputIsValid) {
         addressIsGood.classList.add("fa-check");
         return true;
-    }
+    } return false;
 }
 
 
@@ -300,11 +308,11 @@ function validatePayment(){
     paymentOptions.forEach(option => {
         if(option.checked) {
             paymentSelected = true;
-            console.log(paymentSelected)
         }
     })
     if(paymentSelected) {
         const paymentIsGood = document.querySelector('[data-headercollapse="4"] .fa');
         paymentIsGood.classList.add("fa-check");
-    }
+        return true;
+    } return false
 }
