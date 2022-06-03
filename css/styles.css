@@ -2,6 +2,8 @@
 @import "imports/variables.css";
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: arimo, Verdana, Geneva, Tahoma, sans-serif;
   background-color: var(--light_green);
@@ -284,6 +286,7 @@ nav ul > *.active, nav ul a.active {
 footer {
   display: flex;
   flex-flow: column nowrap;
+  width: 100%;
   height: 20vh;
   min-height: 100px;
   background: var(--mountain_green);

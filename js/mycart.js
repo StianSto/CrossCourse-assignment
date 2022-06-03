@@ -5,10 +5,10 @@ const myCartForm = document.querySelector("form");
 myCartForm.onsubmit = function(e) {
     e.preventDefault();
 
-    if(!validateAddressInfo() || !validateDeliveryInfo() || !validatePayment()) {
-        console.log(2)
-        return;
-    }
+    if(!validateAddressInfo() || !validateDeliveryInfo() || !validatePayment()) return;
+
+
+    localStorage.removeItem('shoppingCart')
 
     window.location.replace("../checkout_success.html");
 };
@@ -21,8 +21,8 @@ cartItems = JSON.parse(localStorage.getItem('shoppingCart'));
 
 // check if there are products in cart and make cartpage
 function checkIfProductsExist() {
-if (cartItems.length === 0) {
-    myCartForm.innerHTML = "<h3>no products selected</h3>";
+if (cartItems.length === 0 || !cartItems) {
+    myCartForm.innerHTML = '<h3>no products selected</h3>';
     
     } else {
     makeCartPage();
