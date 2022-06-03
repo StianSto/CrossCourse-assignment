@@ -343,7 +343,7 @@ select:hover {
   position: fixed;
   display: flex;
   z-index: 100;
-  top: 10rem;
+  top: 5rem;
   right: 1rem;
   border: 3px solid var(--dark_orange);
   background-color: white;
@@ -365,6 +365,8 @@ select:hover {
 
 .add-to-cart__modal img {
   height: 100px;
+  width: fit-content;
+  object-fit: scale-down;
 }
 
 .add-to-cart__modal--text {

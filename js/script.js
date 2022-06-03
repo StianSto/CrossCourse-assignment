@@ -67,7 +67,9 @@ function addedToCart(e) {
         </div>
     `
     const contentWrapper = document.querySelector(".content_wrapper");
-    contentWrapper.appendChild(addToCartModal);
+    const cartLogo = document.querySelector(".nav-icon");
+    // contentWrapper.appendChild(addToCartModal);
+    cartLogo.appendChild(addToCartModal);
 
     setTimeout(() => {
         addToCartModal.style.transform = "translateX(0)"
