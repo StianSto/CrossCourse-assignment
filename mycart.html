@@ -84,7 +84,7 @@
                     </div>
                 </fieldset>
                 <fieldset form="checkout-form" class="adress_info_container">
-                    <h2 data-headercollapse="2">Adress Info</h2>
+                    <h2 data-headercollapse="2">Adress Info<i class="fa fa-solid" aria-hidden="true"></i></h2>
                     <div class="collapse--box" data-collapse="2">
                         <div class="adress_info_inputs">
                             <div class="address_info--sub-field">
@@ -94,7 +94,7 @@
                             <input type="text" name="adress" id="adress" placeholder="Adress">
                         <div class="address_info--sub-field">
                             <input type="text" name="city" id="city" placeholder="City">
-                            <input type="text" name="postal_code" id="postal_code" placeholder="Postal Code" title="numbers only. ex: 1234">
+                            <input type="number" name="postal_code" id="postal_code" placeholder="Postal Code" title="numbers only. ex: 1234">
                         </div>
                         <input type="email" name="email" id="email" placeholder="Email">
                         <input type="tel" name="phone" id="phone" placeholder="Phone" title="numbers only. ex: 123 45 678">
@@ -103,7 +103,7 @@
                     </div>
                 </fieldset>
                 <fieldset form="checkout-form" class="delivery_container">
-                    <h2 data-headercollapse="3">Delivery</h2>
+                    <h2 data-headercollapse="3">Delivery <i class="fa fa-solid" aria-hidden="true"></i></h2>
                     <div class="delivery_inputs collapse--box" data-collapse="3">
                             <div>
                                 <input type="checkbox" name="same_as_adress" id="same_as_adress">
@@ -111,7 +111,7 @@
                             </div>
                             <input type="text" placeholder="Adress" name="adress" id="delivery-adress">
                             <input type="text" placeholder="City" name="city" id="delivery-city">
-                            <input type="text" placeholder="Postal Code" name="postal_code" id="delivery-postal_code">
+                            <input type="number" placeholder="Postal Code" name="postal_code" id="delivery-postal_code">
                         <div class="delivery_method--container">
                             <label for="delivery_method">Choose Delivery Method</label>
                             <select name="delivery_method" id="delivery_method">
@@ -123,7 +123,7 @@
                     </div>
                 </fieldset>
                 <fieldset form="checkout-form" class="payment_container">
-                    <h2 data-headercollapse="4">Payment</h2>
+                    <h2 data-headercollapse="4">Payment<i class="fa fa-solid" aria-hidden="true"></i></h2>
                     <div class="payment_inputs collapse--box" data-collapse="4">
                         <div>
                             <input type="radio" value="card" id="card" name="payment_method">
@@ -145,7 +145,7 @@
                         <p>1 x Nike Tidalwave</p> -->
                     </div>
                     <p class="sum_total_price">Total $178</p>
-                    <button type="submit" form="checkout-form" class="cta order_btn">Order</button>
+                    <button type="submit" form="checkout-form" id="submit-order" class="cta order_btn">Order</button>
                     <!-- <a href="" type="submit" class="cta order_btn">Order</a> i am simulating a form submit button here, as i can't redirect to a successful purchase page with a form submit button without using javascript it seems. -->
                 </div>
             </div>

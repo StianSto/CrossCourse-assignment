@@ -31,8 +31,12 @@ fieldset {
   width: 100px;
 }
 
+input.inputValidationError {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
 input:disabled {
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(211, 211, 211) !important; 
   cursor: default;
 }
 
