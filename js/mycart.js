@@ -2,40 +2,37 @@ import {products} from '/js/components/products.js';
 import {updateCartCount} from '/js/script.js';
 
 const myCartForm = document.querySelector("form");
+const cartProductContainer = document.querySelector(".products_cart_flex");
+let cartItems = [];
+cartItems = JSON.parse(localStorage.getItem('shoppingCart'));
+
 myCartForm.onsubmit = function(e) {
     e.preventDefault();
 
     if(!validateAddressInfo() || !validateDeliveryInfo() || !validatePayment()) return;
 
-
     localStorage.removeItem('shoppingCart')
-
     window.location.replace("../checkout_success.html");
 };
-
-const cartProductContainer = document.querySelector(".products_cart_flex");
-
-let cartItems = [];
-cartItems = JSON.parse(localStorage.getItem('shoppingCart'));
-
 
 // check if there are products in cart and make cartpage
 function checkIfProductsExist() {
 if (cartItems.length === 0 || !cartItems) {
+
     myCartForm.innerHTML = '<h3>no products selected</h3>';
     
     } else {
-    makeCartPage();
 
+    makeCartPage();
     const productsCheckIsGood = document.querySelector('[data-headercollapse="1"] .fa');
     productsCheckIsGood.classList.add("fa-check")
+
     }
 }
 checkIfProductsExist()
 
 function makeCartPage() {
     
-    let productlist = "";
     let arrayIndex = -1;
     let html = "";
 
@@ -56,7 +53,8 @@ function makeCartPage() {
 
     cartProductContainer.innerHTML = html
     let continueBtn = document.createElement("div")
-    continueBtn.innerHTML = `<div class="cta cta--alt" id="continue" data-next-collapse="1">Continue</div>`
+    continueBtn.innerHTML = `<div class="cta cta--alt" id="continue" data-next-collapse="1">Continue</div>`;
+    continueBtn.addEventListener("click", nextForm)
     cartProductContainer.append(continueBtn);
 
     const removeItem = document.querySelectorAll(".remove-item");
@@ -67,6 +65,7 @@ function makeCartPage() {
 
 // remove items and update arrays, storage and page
 function removeItemFromCart(e) {
+
     if(!cartItems.length > 1) {cartItems = []}
     const dataProduct = e.target.dataset.product
     cartItems.splice(dataProduct, 1)
@@ -78,9 +77,6 @@ function removeItemFromCart(e) {
     cartSummary();
     checkIfProductsExist();
 }
-
-
-
 
 const headerCollapseable = document.querySelectorAll('[data-headercollapse]');
 const collapseable = document.querySelectorAll('[data-collapse]');
@@ -96,7 +92,6 @@ headerCollapseable.forEach(i => {
 
 // continue to next fieldset
 function nextForm(e) {
-
     let targetCollapseDataId = parseFloat(e.target.dataset.nextCollapse) + 1;
 
     collapseable.forEach(i => {
@@ -135,7 +130,6 @@ function openFieldset(e) {
     }) 
 }
 
-
 // form validations
 const firstName = document.querySelector("#first_name");
 const lastName = document.querySelector("#last_name");
@@ -145,28 +139,8 @@ const postalCode = document.querySelector("#postal_code");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 
-const firstNameContainer = document.querySelector(".input-container--firstname")
-const lastNameContainer = document.querySelector(".input-container--lastname")
-const addressContainer = document.querySelector(".input-container--address")
-const cityContainer = document.querySelector(".input-container--city")
-const postalCodeContainer = document.querySelector(".input-container--postalcode")
-const emailContainer = document.querySelector(".input-container--email")
-const phoneContainer = document.querySelector(".input-container--phone")
-
 let validateInputsAddressInfoExist = [firstName, lastName, address, city, postalCode, email, phone];
 let validateInputsAddressInfoNumbers = [postalCode, phone];
-
-let customerAddressInfo = {
-    firstName: "",
-    lastName: "",
-    address: "",
-    city: "",
-    postalCode: "",
-    email: "",
-    phone: ""
-} 
-
-
 
 // validate Address Info
 const regexNumbersOnly = /^[0-9]+$/;
@@ -213,8 +187,6 @@ function validateAddressInfo() {
 
     validateInputEmail(email)
 
-    console.log(inputIsValid)
-
     if (inputIsValid) {
         addressIsGood.classList.add("fa-check");
         cartSummary();
@@ -226,7 +198,6 @@ function validateAddressInfo() {
 }
 
 // validate Delivery Info
-
 const sameAsAddress = document.querySelector("#same_as_adress");
 sameAsAddress.addEventListener("click", sameAsAddressChecked);
 const deliveryAddress = document.querySelector("#delivery-adress");
@@ -348,13 +319,16 @@ function cartSummary() {
 
     let htmlProducts = "<h4>Products</h4>"
     cartItems.forEach(item => {
+
         let itemPrice = parseFloat(item.price)
         total += itemPrice;
         htmlProducts += `<p>1 x ${item.brandName} - ${item.productName}</p>`;
+        
     });
-    html += htmlProducts;
 
+    html += htmlProducts;
     let htmlDeliveryInfo = "";
+
     if(useAddressInfoForDelivery) {
         htmlDeliveryInfo = `
         <div>
@@ -366,6 +340,7 @@ function cartSummary() {
         </div>
         `
     } else {
+
         htmlDeliveryInfo = `
         <div>
         <h4>Delivery</h4>
@@ -375,9 +350,8 @@ function cartSummary() {
         </div>
         `
     }
+
     html += htmlDeliveryInfo;
-
-
     summary.innerHTML = html
     sumTotalPrice.innerHTML = `Total: $${total}`
 }
