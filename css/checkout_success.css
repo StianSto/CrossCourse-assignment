@@ -1,13 +1,19 @@
+body {
+    display: block !important;
+    overflow-y: hidden;
+}
+
 main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    height: 100vh;
+    margin-block: 10vh auto !important; 
+    height: 60vh;
     text-align: center;
+    gap: 1rem;
 }
 
 .logo_full {
-    flex: 3;
     width: 80vw;
     margin: 5vh auto 0;
     max-width: 550px;
@@ -16,16 +22,15 @@ main {
 main img {width: 100%;}
 
 .check_icon {
-    width: 60vw;
-    max-width: 450px;
+    width: clamp(100px, 20%, 200px);
     margin: 0 auto;
-    flex: 2;
 }
 
-h1 {font-size: clamp(24px, 7vw, 46px) ;}
+h1 {
+    font-size: clamp(24px, 7vw, 46px);
+    margin: 0;
+}
 p{font-size: clamp(14px, 4vw, 26px)}
-
-.btn_back-to-home {flex: 2;}
 
 .back_to_home_page_btn {
     background-color: var(--sky_blue);
