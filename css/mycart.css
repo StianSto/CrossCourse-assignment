@@ -1,5 +1,5 @@
 main {
-  padding: 10px 10px 40px; /*pushes footer down + constrains main content on mobile*/
+  margin-block: 2rem; 
 }
 
 h2 {
@@ -19,6 +19,14 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  margin: 0;
+  margin-top: 3rem;
+}
+.summary_mycart > h4 {
+  margin-top: 1rem;
+}
+
 p {
   font-size: clamp(16px, 2vw, 18px);
 }
@@ -32,8 +40,19 @@ fieldset {
 }
 
 input.inputValidationError {
-  background-color: rgba(255, 0, 0, 0.2);
+  border-color: rgb(170, 95, 95) !important;
+  background-color: rgba(170, 0, 0, 0.08);
 }
+
+.err-msg {
+  /* display: none; */
+  color: rgb(170, 0, 0);
+}
+
+.err-msg--novalue, .err-msg--invalid {
+  display: inline;
+}
+
 
 input:disabled {
   background-color: rgb(211, 211, 211) !important; 
@@ -42,15 +61,15 @@ input:disabled {
 
 .content-wrapper {
   max-width: calc(100vw - 20px);
+  margin-inline: auto; 
   display: grid;
   gap: 10px;
 }
 
 /* products_cart - flex */
-.products_cart, .products_cart_flex, .products_cart_info {
-  display: flex;
-}
-
+  .products_cart, .products_cart_flex, .products_cart_info {
+    display: flex;
+  }
 
   .products_cart_flex {
     flex-flow: column; 
@@ -82,33 +101,62 @@ input:disabled {
   .remove-item:hover {
     cursor: pointer;
     text-decoration: underline;
-  }
+  }  
 
 /*adress and delivery forms*/
   .adress_info_inputs, .delivery_inputs {
     display: flex;
     flex-flow: row wrap;
   }
+
+  .input-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 20ch;
+  }
+
+  .input-container label {
+    font-size: var(--small);
+  }
+
+  .input-container input {
+    font-size: calc(var(--small) - 2px);
+  }
+
+  .input-container--city, .input-container--email {
+    flex: 2;
+  }
+
+  .input-container--same_as_address, .input-container--delivery_address {
+    flex: none;
+    width: calc(100% - 20px);
+  }
+
+  .input-container--same_as_address{
+    flex-direction: row;
+    gap: 1em;
+  }
+
   .adress_info_inputs input, .delivery_inputs input {
     padding: 10px;
-    margin: 10px;
     border: var(--charcoal) solid 1px;
   }
 
-  #adress, #delivery-adress {width: 100%;}
+  .payment_inputs {
+    margin-top: 2rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+  }
 
   .address_info--sub-field {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
   }
-
-  .address_info--sub-field > * {
-    flex: 1;
-    width: 100%;
-    min-width: 20ch;
-  }
-  #phone, #postal_code {width: 12ch;}
 
   select {
     padding: 10px;
@@ -123,10 +171,11 @@ input:disabled {
     width: 100%;
   }
 
-/* page and elements styles */
+
 .content-wrapper > * {
   background: white;
-  padding: 10px;
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
 }
 
 [data-collapse] {
@@ -178,6 +227,11 @@ input:disabled {
   padding: 8px;
   font-size: 0.5em;
   margin-left: 1em;
+}
+
+#continue {
+  margin-left: auto;
+  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 768px) {

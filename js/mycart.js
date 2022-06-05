@@ -49,14 +49,14 @@ function makeCartPage() {
                 <p><span class="item-count">x 1</span></p>
                 <p class="item-price">$ ${item.price}</p>
             </div>
-            <span class="remove-item" data-product="${arrayIndex}">remove</span>
+            <span class="remove-item" data-product="${arrayIndex}"><i class="fa fa-solid fa-trash" style="margin-right: 8px;" ></i>remove</span>
         </div>
         `  
     })
 
     cartProductContainer.innerHTML = html
     let continueBtn = document.createElement("div")
-    continueBtn.innerHTML = `<div class="cta cta--alt" data-next-collapse="1">Continue</div>`
+    continueBtn.innerHTML = `<div class="cta cta--alt" id="continue" data-next-collapse="1">Continue</div>`
     cartProductContainer.append(continueBtn);
 
     const removeItem = document.querySelectorAll(".remove-item");
@@ -79,24 +79,7 @@ function removeItemFromCart(e) {
     checkIfProductsExist();
 }
 
-function cartSummary() {
 
-    if(!cartItems) {return}
-
-    const summary = document.querySelector(".summary_mycart")
-    const sumTotalPrice = document.querySelector(".sum_total_price")
-
-    let total = 0;
-    let html = "";
-    cartItems.forEach(item => {
-        let itemPrice = parseFloat(item.price)
-        total += itemPrice;
-        html += `<p>1 x ${item.brandName} - ${item.productName}</p>`
-    });
-    summary.innerHTML = html
-    sumTotalPrice.innerHTML = `Total: $${total}`
-}
-cartSummary();
 
 
 const headerCollapseable = document.querySelectorAll('[data-headercollapse]');
@@ -132,7 +115,7 @@ function nextForm(e) {
     }) 
 }
 
-// opne fieldset when header is clicked
+// open fieldset when header is clicked
 function openFieldset(e) {
     let targetCollapseDataId = parseFloat(e.target.dataset.headercollapse);
 
@@ -162,6 +145,17 @@ const postalCode = document.querySelector("#postal_code");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 
+const firstNameContainer = document.querySelector(".input-container--firstname")
+const lastNameContainer = document.querySelector(".input-container--lastname")
+const addressContainer = document.querySelector(".input-container--address")
+const cityContainer = document.querySelector(".input-container--city")
+const postalCodeContainer = document.querySelector(".input-container--postalcode")
+const emailContainer = document.querySelector(".input-container--email")
+const phoneContainer = document.querySelector(".input-container--phone")
+
+let validateInputsAddressInfoExist = [firstName, lastName, address, city, postalCode, email, phone];
+let validateInputsAddressInfoNumbers = [postalCode, phone];
+
 let customerAddressInfo = {
     firstName: "",
     lastName: "",
@@ -178,60 +172,57 @@ let customerAddressInfo = {
 const regexNumbersOnly = /^[0-9]+$/;
 const regexEmail = /\S+@\S+\.\S+/;
 
+
 function validateAddressInfo() {
 
+    const addressIsGood = document.querySelector('[data-headercollapse="2"] .fa');
     let inputIsValid = true;
 
     function validateInputExists(input) {
-        if(!input.value.length > 0) {
-            inputIsValid = false;
-            input.classList.add("inputValidationError");
-        }
+        let testIfExists = input.value.length > 0;
+        if (!testIfExists) inputIsValid = false
+        let msg = "* required";
+        displayErrMsg(input, msg, inputIsValid, testIfExists);
     }
+
     function validateInputNumbersOnly(input) {
-        if(!regexNumbersOnly.test(input.value)) {
-            inputIsValid = false;
-            input.classList.add("inputValidationError");
-        }
+        let testIfNumbersOnly = regexNumbersOnly.test(input.value);
+        if (!testIfNumbersOnly) inputIsValid = false
+        let msg = "* use numbers only";
+        displayErrMsg(input, msg, inputIsValid, testIfNumbersOnly);
     }
+
     function validateInputEmail(input) {
-        if(!regexEmail.test(input.value)) {
-            inputIsValid = false;
-            input.classList.add("inputValidationError");
-        }
+        let testIfEmailValid = regexEmail.test(input.value);
+        if (!testIfEmailValid) inputIsValid = false
+        let msg = '* please enter a valid email: "john@mail.com"';
+        displayErrMsg(input, msg, inputIsValid, regexEmail.test(input.value));
     }
 
-    firstName.classList.remove("inputValidationError");
-    lastName.classList.remove("inputValidationError");
-    address.classList.remove("inputValidationError");
-    city.classList.remove("inputValidationError");
-    postalCode.classList.remove("inputValidationError");
-    email.classList.remove("inputValidationError");
-    phone.classList.remove("inputValidationError");
+    validateInputsAddressInfoExist.forEach(i => {
+        i.classList.remove("inputValidationError");
+        validateInputExists(i);
+        i.addEventListener("blur", validateAddressInfo);
+    });
 
-    validateInputExists(firstName);
-    validateInputExists(lastName);
-    validateInputExists(address);
-    validateInputExists(city);
-    validateInputExists(postalCode);
-    validateInputNumbersOnly(postalCode);
+    validateInputsAddressInfoNumbers.forEach(i => {
+        i.classList.remove("inputValidationError");
+        validateInputNumbersOnly(i);
+        i.addEventListener("blur", validateAddressInfo);
+    })
+
     validateInputEmail(email)
-    validateInputNumbersOnly(phone);
 
-    firstName.addEventListener("blur", validateAddressInfo)
-    lastName.addEventListener("blur", validateAddressInfo)
-    address.addEventListener("blur", validateAddressInfo)
-    city.addEventListener("blur", validateAddressInfo)
-    postalCode.addEventListener("blur", validateAddressInfo)
-    email.addEventListener("blur", validateAddressInfo)
-    phone.addEventListener("blur", validateAddressInfo)
+    console.log(inputIsValid)
 
     if (inputIsValid) {
-        const addressIsGood = document.querySelector('[data-headercollapse="2"] .fa');
-        addressIsGood.classList.add("fa-check")
+        addressIsGood.classList.add("fa-check");
+        cartSummary();
         return true;
+    } else {
+        addressIsGood.classList.remove("fa-check");
+        return false;
     }
-    return false;
 }
 
 // validate Delivery Info
@@ -262,7 +253,7 @@ function validateDeliveryInfo() {
     let deliveryInputIsValid = true;
     const addressIsGood = document.querySelector('[data-headercollapse="3"] .fa');
     addressIsGood.classList.remove("fa-check");
-
+    
     deliveryAddress.classList.remove("inputValidationError");
     deliveryCity.classList.remove("inputValidationError");
     deliveryPostalCode.classList.remove("inputValidationError");
@@ -272,21 +263,23 @@ function validateDeliveryInfo() {
     deliveryPostalCode.addEventListener("blur", validateDeliveryInfo);
 
     function validateInputExists(input) {
-        if(!input.value.length > 0) {
-            deliveryInputIsValid = false;
-            input.classList.add("inputValidationError");
-        }
+        let testIfExists = input.value.length > 0;
+        if(!testIfExists) deliveryInputIsValid = false;
+        let msg = "* enter a value";
+        displayErrMsg(input, msg, deliveryInputIsValid, testIfExists);
     }
     function validateInputNumbersOnly(input) {
-        if(!regexNumbersOnly.test(input.value)) {
-            deliveryInputIsValid = false;
-            input.classList.add("inputValidationError");
-        }
+
+        let testIfNumbersOnly = regexNumbersOnly.test(input.value);
+        if(!testIfNumbersOnly) deliveryInputIsValid = false;
+        let msg = "* enter numbers only";
+        displayErrMsg(input, msg, deliveryInputIsValid, testIfNumbersOnly);
     }
 
     if(!useAddressInfoForDelivery) {
         validateInputExists(deliveryAddress);
         validateInputExists(deliveryCity);
+        validateInputExists(deliveryPostalCode);
         validateInputNumbersOnly(deliveryPostalCode);
     } else {
         deliveryInputIsValid = useAddressInfoForDelivery;
@@ -294,25 +287,98 @@ function validateDeliveryInfo() {
     
     if(deliveryInputIsValid) {
         addressIsGood.classList.add("fa-check");
+        cartSummary();
         return true;
-    } return false;
+    } 
+    addressIsGood.classList.remove("fa-check");
+    return false;
 }
-
 
 //  validate payment 
 const paymentOptions = document.querySelectorAll("[type='radio']");
-paymentOptions.forEach(e => {e.addEventListener("click", validatePayment)})
+paymentOptions.forEach(e => {e.addEventListener("click", validatePayment)});
 
 function validatePayment(){
     let paymentSelected = false;
+    cartSummary();
     paymentOptions.forEach(option => {
         if(option.checked) {
             paymentSelected = true;
         }
     })
     if(paymentSelected) {
+        cartSummary();
         const paymentIsGood = document.querySelector('[data-headercollapse="4"] .fa');
         paymentIsGood.classList.add("fa-check");
         return true;
     } return false
 }
+
+function displayErrMsg(input, msg, inputIsValid, validityTest) {
+    let inputSibling = input.nextElementSibling;
+    if(!validityTest) {
+        inputIsValid = false;
+        input.classList.add("inputValidationError");      
+
+        let errMsg = document.createElement("span");
+        errMsg.classList.add("err-msg");
+        errMsg.innerText = msg;
+
+        if(!inputSibling) {
+            input.after(errMsg);
+        }
+
+    } else {
+        if(inputSibling) {
+            input.parentNode.removeChild(inputSibling);
+
+        }
+    }
+}
+
+function cartSummary() {
+
+    if(!cartItems) {return}
+
+    const summary = document.querySelector(".summary_mycart")
+    const sumTotalPrice = document.querySelector(".sum_total_price")
+
+    let total = 0;
+    let html = "";
+
+    let htmlProducts = "<h4>Products</h4>"
+    cartItems.forEach(item => {
+        let itemPrice = parseFloat(item.price)
+        total += itemPrice;
+        htmlProducts += `<p>1 x ${item.brandName} - ${item.productName}</p>`;
+    });
+    html += htmlProducts;
+
+    let htmlDeliveryInfo = "";
+    if(useAddressInfoForDelivery) {
+        htmlDeliveryInfo = `
+        <div>
+            <h4>Delivery</h4>
+            <p>${firstName.value} ${lastName.value}</p>
+            <p>${address.value}</p>
+            <p>${city.value} ${postalCode.value}</p>
+            <p></p>
+        </div>
+        `
+    } else {
+        htmlDeliveryInfo = `
+        <div>
+        <h4>Delivery</h4>
+        <p>${firstName.value} ${lastName.value}</p>
+        <p>${deliveryAddress.value}</p>
+        <p>${deliveryCity.value} ${deliveryPostalCode.value}</p>
+        </div>
+        `
+    }
+    html += htmlDeliveryInfo;
+
+
+    summary.innerHTML = html
+    sumTotalPrice.innerHTML = `Total: $${total}`
+}
+cartSummary();
