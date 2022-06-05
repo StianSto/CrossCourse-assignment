@@ -53,8 +53,7 @@ function makeCartPage() {
 
     cartProductContainer.innerHTML = html
     let continueBtn = document.createElement("div")
-    continueBtn.innerHTML = `<div class="cta cta--alt" id="continue" data-next-collapse="1">Continue</div>`;
-    continueBtn.addEventListener("click", nextForm)
+    continueBtn.innerHTML = `<div class="cta cta--alt continue" data-next-collapse="1">Continue</div>`;
     cartProductContainer.append(continueBtn);
 
     const removeItem = document.querySelectorAll(".remove-item");
@@ -81,6 +80,8 @@ function removeItemFromCart(e) {
 const headerCollapseable = document.querySelectorAll('[data-headercollapse]');
 const collapseable = document.querySelectorAll('[data-collapse]');
 const nextCollapseableBtn = document.querySelectorAll("[data-next-collapse]");
+
+console.log(nextCollapseableBtn)
 
 nextCollapseableBtn.forEach(btn => {
     btn.addEventListener("click", nextForm);
