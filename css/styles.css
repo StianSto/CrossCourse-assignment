@@ -106,7 +106,7 @@ header {
 }
 
 .searchbar, .topnav {
-  max-width: 1300px;
+  max-width: 1000px;
   margin-inline: auto;
   padding-inline: max(10px, 2vw);
 }
@@ -232,16 +232,27 @@ nav ul > *.active, nav ul a.active {
 .searchbar {
   display: flex;
   padding-block: 0.5em;
+  appearance: none;
+  border: none;
 }
 
 .searchbar input[type="text"] {
+  appearance: none;
+  border: none;
   width: 100%;
   box-sizing: border-box;
   padding: 10px 20px;
   font-size: 1em;
 }
 
+.searchbar input[type="text"]:focus-visible {
+  outline: 2px solid var(--light_orange);
+}
+
+
 .search_button {
+  -webkit-appearance: none;
+  appearance: none;
   padding: 0 25px;
   border-width: 1px;
   background-color: #404040;
@@ -252,7 +263,7 @@ nav ul > *.active, nav ul a.active {
 
 /* main */
 .breadcrumb-trail {
-  font-size: 1.25rem;
+  font-size: var(--small);
   margin: 1rem 2rem;
 }
 .breadcrumb:hover {
@@ -379,4 +390,9 @@ select:hover {
 
 .add-to-cart__modal a:hover{
   color: var(--dark_orange);
+}
+
+.copyright {
+  color: white; 
+  margin-inline: auto;
 }

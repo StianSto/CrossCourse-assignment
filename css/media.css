@@ -74,9 +74,8 @@
   
   /* Home page */
   main {
-    max-width: 70%;
-    min-width: 1000px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin-inline: auto;
   }
 
   .product:hover {

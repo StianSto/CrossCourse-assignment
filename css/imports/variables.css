@@ -14,9 +14,9 @@
 
     /* font-sizes */
     --large1: clamp(40px, 8vw + 1em, 80px); /*h1*/
-    --large2: clamp(32px, 7vw + 1em, 60px); /*h1*/
-    --medium1: clamp(26px, 4.5vw + 1em, 48px); /*h2*/
-    --medium2: clamp(20px, 4vw + 1em, 36px);
-    --medium3: clamp(18px, 3vw + 1em, 30px);
-    --small: clamp(16px, 0.5vw + 0.5em, 20px); /*paragraph*/
+    --large2: clamp(26px, 5vw + 0.5em, 50px); /*h1*/
+    --medium1: clamp(20px, 3vw + 0.5em, 36px); /*h2*/
+    --medium2: clamp(18px, 2.5vw + 0.5em, 30px);
+    --medium3: clamp(18px, 2vw + 0.5em, 26px);
+    --small: clamp(14px, 1vw + 0.5em, 16px); /*paragraph*/
 }

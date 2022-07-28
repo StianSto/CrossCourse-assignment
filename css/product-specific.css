@@ -1,5 +1,5 @@
 main {
-    margin: 100px auto !important;
+    margin: 3.5rem auto !important;
 }
 
 h1 {
@@ -57,6 +57,8 @@ h1 {
 .wrapper_product_specific .cta {grid-area: cta;}
 
 #select_size {
+    -webkit-appearance: none;
+    appearance: none;
     padding: 10px;
     border-radius: 5px;
     background-color: var(--light_green);
