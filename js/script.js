@@ -1,5 +1,3 @@
-import {products} from '/js/components/products.js';
-
 let shoppingCartArr = [];
 let localCart = JSON.parse(localStorage.getItem('shoppingCart'));
 if(localCart) {
@@ -47,13 +45,14 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 }
+//
 
 function addedToCart(e) {
-    const addProductId = parseInt(e.target.dataset.product)
-    const addProduct = products.find((product => product.id === addProductId))
+    const addProductId = parseInt(e.target.dataset.product);
+    const addProduct = products.find((product => product.id === addProductId));
 
     shoppingCartArr.push(addProduct);
-    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartArr))
+    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartArr));
     updateCartCount();
 
 
