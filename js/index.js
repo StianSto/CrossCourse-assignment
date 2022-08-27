@@ -6,13 +6,20 @@ let products = [];
 async function getProductsFromRestAPI() {
     const response = await fetch(productsUrl);
     const products = await response.json();
-    console.log(products);
  
     const featuredProducts= products.filter(product => product.tags.find(tag => tag.name === "featured"))
-    console.log(featuredProducts)
 
-    function createproducts(productArr, createHtml) {
-  
+    createproducts(products, popularProductsList);
+    createproducts(products, popularProductsList);
+    createproducts(featuredProducts, winterCollectionProductsList);
+    createproducts(featuredProducts, winterCollectionProductsList);
+    // running twice for content (temporary)
+}
+
+getProductsFromRestAPI();
+
+
+function createproducts(productArr, createHtml) {  
     productArr.forEach(product => {
         let price = product.prices.price / 100;
         let html = `
@@ -28,17 +35,5 @@ async function getProductsFromRestAPI() {
             </a>  
         </li>`;
         createHtml.innerHTML += html;
-        
-    });
-         
-    }
-    createproducts(products, popularProductsList);
-    createproducts(products, popularProductsList);
-
-    createproducts(featuredProducts, winterCollectionProductsList);
-    createproducts(featuredProducts, winterCollectionProductsList);
+ });
 }
-
-getProductsFromRestAPI();
-
-

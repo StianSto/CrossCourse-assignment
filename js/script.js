@@ -1,7 +1,15 @@
 let shoppingCartArr = [];
-let localCart = JSON.parse(localStorage.getItem('shoppingCart'));
-if(localCart) {
-    shoppingCartArr = localCart;
+// let localCart = JSON.parse(localStorage.getItem('shoppingCart'));
+// if(localCart) {
+//     shoppingCartArr = localCart;
+// }
+
+const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products";
+let products = [];
+async function getProducts() {
+    const response = await fetch(productsUrl);
+    products = await response.json();
+    console.log(products)
 }
 
 const navMenuBtn = document.querySelector(".hamburger-menu_header");
@@ -48,12 +56,15 @@ window.onscroll = function() {
 //
 
 function addedToCart(e) {
+    getProducts();
     const addProductId = parseInt(e.target.dataset.product);
     const addProduct = products.find((product => product.id === addProductId));
 
     shoppingCartArr.push(addProduct);
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartArr));
     updateCartCount();
+
+    console.log(shoppingCartArr)
 
 
     const addToCartModal = document.createElement("div");
@@ -90,10 +101,10 @@ function updateCartCount() {
         cartCount.style.display = "flex"
     }
 
-    const cartArr = JSON.parse(localStorage.getItem('shoppingCart'));
-    if (cartArr) {
-        cartCount.innerHTML = cartArr.length;
-    }
+    // const cartArr = JSON.parse(localStorage.getItem('shoppingCart'));
+    // if (cartArr) {
+    //     cartCount.innerHTML = cartArr.length;
+    // }
 }
 updateCartCount();
 
