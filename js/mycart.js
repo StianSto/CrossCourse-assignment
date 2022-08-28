@@ -27,7 +27,6 @@ if (cartItems.length === 0 || !cartItems) {
     makeCartPage();
     const productsCheckIsGood = document.querySelector('[data-headercollapse="1"] .fa');
     productsCheckIsGood.classList.add("fa-check")
-
     }
 }
 checkIfProductsExist()

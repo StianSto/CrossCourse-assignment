@@ -17,6 +17,25 @@ h3 {font-size: var(--medium3);}
   gap: 5px;
 }
 
+.filter-btn {
+  padding-inline: 2em;
+  padding-block: 0.75em;
+  border-radius: 0.25em;
+  border: 1px solid var(--clay_green);
+  margin-right: 10%;
+  font-size: var(--small);
+}
+
+.filter-btn:hover {
+  background-color: var(--clay_green);
+  border: 1px solid var(--clay_green);
+}
+
+.filter-btn:active {
+  background-color: var(--light_green);
+  border: 1px solid var(--mountain_green);
+}
+
 select {
   border-top: none;
   border-left: none;

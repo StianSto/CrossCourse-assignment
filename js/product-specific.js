@@ -7,7 +7,7 @@ const productID = parseFloat(parameter.get("id"));
 const productContainer = document.querySelector(".content_wrapper");
 const productSpecific = document.createElement("div"); 
 
-const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products";
+const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products/";
 
 async function getProductsFromRestAPI() {
     const response = await fetch(productsUrl);

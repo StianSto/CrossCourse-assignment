@@ -1,7 +1,7 @@
 const winterCollectionProductsList = document.querySelector(".product_list--wintercollection")
 const popularProductsList = document.querySelector(".product_list--popular");
 
-const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products";
+const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products/";
 let products = [];
 async function getProductsFromRestAPI() {
     const response = await fetch(productsUrl);

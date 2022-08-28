@@ -4,7 +4,7 @@ if(localCart) {
     shoppingCartArr = localCart;
 }
 
-const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products";
+const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products/";
 let products = [];
 async function getProducts() {
     const response = await fetch(productsUrl);

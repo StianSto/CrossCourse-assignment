@@ -77,25 +77,25 @@
     <main>
         <h1>Category Products</h1>
         <div class="filter_bar">
-            <h2>Filter</h2>
+            <button class="filter-btn">Filter</button>
             <div class="filter_bar_options">
                 <select name="sex" id="filter_sex">
-                    <option value="" hidden>Sex</option>
-                    <option value="Men">Men</option>
-                    <option value="Women">Women</option>
-                    <option value="Unisex">Unisex</option>
+                    <option value="">Sex</option>
+                    <option data-filter-sex="men">Men</option>
+                    <option data-filter-sex="women">Women</option>
+                    <option data-filter-sex="unisex">Unisex</option>
                 </select>
-                <select name="size" id="filter_sex">
-                    <option value="" hidden>Size</option>
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
+                <select name="size" id="filter_size">
+                    <option value="">Size</option>
+                    <option data-filter-size="small">Small</option>
+                    <option data-filter-size="medium">Medium</option>
+                    <option data-filter-size="large">Large</option>
                 </select>
                 <select name="price" id="filter_price">
-                    <option value="" hidden>Price</option>
-                    <option value="$50&gt;">$50&gt;</option>
-                    <option value="50-$100">$50-$100</option>
-                    <option value="$100&lt;">$100&lt;</option>
+                    <option value="">Price</option>
+                    <option data-filter-price-less="50">$50&gt;</option>
+                    <option data-filter-price-more="50" data-filter-price-less="70">$50-$100</option>
+                    <option data-filter-price-more="70">$100&lt;</option>
                 </select>
             </div>
         </div>
