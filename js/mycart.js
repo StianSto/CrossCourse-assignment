@@ -1,10 +1,11 @@
-import {products} from '/js/components/products.js';
 import {updateCartCount} from '/js/script.js';
 
 const myCartForm = document.querySelector("form");
 const cartProductContainer = document.querySelector(".products_cart_flex");
 let cartItems = [];
 cartItems = JSON.parse(localStorage.getItem('shoppingCart'));
+
+console.log(cartItems)
 
 myCartForm.onsubmit = function(e) {
     e.preventDefault();
@@ -31,6 +32,8 @@ if (cartItems.length === 0 || !cartItems) {
 }
 checkIfProductsExist()
 
+
+// make html for My Cart page
 function makeCartPage() {
     
     let arrayIndex = -1;
@@ -40,11 +43,11 @@ function makeCartPage() {
         arrayIndex++
         html += `
         <div class="products_cart">
-            <img src="${item.img}" alt="${item.altDescr}}">
+            <img src="${item.images[0].src}" alt="${item.images[0].alt}}">
             <div class="products_cart_info">
-                <h3>${item.brandName} ${item.productName}</h3>
+                <h3>${item.name}</h3>
                 <p><span class="item-count">x 1</span></p>
-                <p class="item-price">$ ${item.price}</p>
+                <p class="item-price">$ ${item.prices.price / 100}</p>
             </div>
             <span class="remove-item" data-product="${arrayIndex}"><i class="fa fa-solid fa-trash" style="margin-right: 8px;" ></i>remove</span>
         </div>
@@ -61,6 +64,7 @@ function makeCartPage() {
         remove.addEventListener("click", removeItemFromCart)
     })
 }
+
 
 // remove items and update arrays, storage and page
 function removeItemFromCart(e) {
@@ -81,8 +85,6 @@ const headerCollapseable = document.querySelectorAll('[data-headercollapse]');
 const collapseable = document.querySelectorAll('[data-collapse]');
 const nextCollapseableBtn = document.querySelectorAll("[data-next-collapse]");
 
-console.log(nextCollapseableBtn)
-
 nextCollapseableBtn.forEach(btn => {
     btn.addEventListener("click", nextForm);
 })
@@ -90,6 +92,7 @@ nextCollapseableBtn.forEach(btn => {
 headerCollapseable.forEach(i => {
     i.addEventListener("click", openFieldset);
 })
+
 
 // continue to next fieldset
 function nextForm(e) {
@@ -111,6 +114,7 @@ function nextForm(e) {
     }) 
 }
 
+
 // open fieldset when header is clicked
 function openFieldset(e) {
     let targetCollapseDataId = parseFloat(e.target.dataset.headercollapse);
@@ -130,6 +134,7 @@ function openFieldset(e) {
         }
     }) 
 }
+
 
 // form validations
 const firstName = document.querySelector("#first_name");
@@ -197,6 +202,7 @@ function validateAddressInfo() {
         return false;
     }
 }
+
 
 // validate Delivery Info
 const sameAsAddress = document.querySelector("#same_as_adress");
@@ -321,9 +327,9 @@ function cartSummary() {
     let htmlProducts = "<h4>Products</h4>"
     cartItems.forEach(item => {
 
-        let itemPrice = parseFloat(item.price)
+        let itemPrice = parseFloat(item.prices.price / 100)
         total += itemPrice;
-        htmlProducts += `<p>1 x ${item.brandName} - ${item.productName}</p>`;
+        htmlProducts += `<p>1 x ${item.name}</p>`;
         
     });
 

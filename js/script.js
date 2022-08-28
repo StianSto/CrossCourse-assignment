@@ -1,16 +1,16 @@
 let shoppingCartArr = [];
-// let localCart = JSON.parse(localStorage.getItem('shoppingCart'));
-// if(localCart) {
-//     shoppingCartArr = localCart;
-// }
+let localCart = JSON.parse(localStorage.getItem('shoppingCart'));
+if(localCart) {
+    shoppingCartArr = localCart;
+}
 
 const productsUrl = "https://www.snakesandbeans.com/wp-json/wc/store/products";
 let products = [];
 async function getProducts() {
     const response = await fetch(productsUrl);
     products = await response.json();
-    console.log(products)
 }
+getProducts();
 
 const navMenuBtn = document.querySelector(".hamburger-menu_header");
 const menuBars = document.querySelectorAll(".bar");
@@ -56,21 +56,21 @@ window.onscroll = function() {
 //
 
 function addedToCart(e) {
-    getProducts();
     const addProductId = parseInt(e.target.dataset.product);
+    console.log(products);
     const addProduct = products.find((product => product.id === addProductId));
 
     shoppingCartArr.push(addProduct);
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartArr));
     updateCartCount();
 
-    console.log(shoppingCartArr)
+    console.log(addProduct);
 
 
     const addToCartModal = document.createElement("div");
     addToCartModal.classList.add("add-to-cart__modal");
     addToCartModal.innerHTML = `
-        <img src="${addProduct.img}" alt="">
+        <img src="${addProduct.images[0].src}" alt="">
         <div class="add-to-cart__modal--text">
             <p>Item has been added to your cart</p>
             <a class="cta" href="/mycart.html" style="font-size: 1rem;">go to cart</a>
@@ -101,12 +101,12 @@ function updateCartCount() {
         cartCount.style.display = "flex"
     }
 
-    // const cartArr = JSON.parse(localStorage.getItem('shoppingCart'));
-    // if (cartArr) {
-    //     cartCount.innerHTML = cartArr.length;
-    // }
+    const cartArr = JSON.parse(localStorage.getItem('shoppingCart'));
+    if (cartArr) {
+        cartCount.innerHTML = cartArr.length;
+    }
 }
 updateCartCount();
 
-export {addedToCart}
-export {updateCartCount}
+export {addedToCart};
+export {updateCartCount};
