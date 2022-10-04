@@ -1,9 +1,9 @@
-https://rainydays-ss.netlify.app/
-
 # Rainy Days
 ![image](Assets/images/rainydays_full_logo.png)
 
 This project is a fictional e-commerce site that sells clothing for outdoors. their primary target audience are poeple 30+ that wants to go outdoors. This was also my first major project as a front-end dev student.
+
+website: https://rainydays-ss.netlify.app/
 
 ## Description
 
@@ -13,14 +13,11 @@ This project is a fictional e-commerce site that sells clothing for outdoors. th
 - CSS 
 - JS
 
-was originally made as HTML and CSS only.
+was originally made as HTML and CSS only, but has since gotten a few JS updates to improve the website.
 
 ## Getting Started
 
 ### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
@@ -34,9 +31,6 @@ npm install
 ```
 
 ### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
 To run the app, run the following commands:
 
 ```bash
@@ -49,11 +43,7 @@ Here you can detail any information you want to provide regarding contributing t
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
 
 ## License
 
