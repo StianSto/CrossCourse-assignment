@@ -2,7 +2,7 @@ https://rainydays-ss.netlify.app/
 
 # Rainy Days
 
-![image](../assets/images/rainydays_full_logo.png)
+![image](assets/images/rainydays_full_logo.png)
 
 A simple overview of the use/purpose of the project.
 
