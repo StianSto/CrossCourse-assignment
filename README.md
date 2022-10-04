@@ -1,27 +1,19 @@
 https://rainydays-ss.netlify.app/
 
 # Rainy Days
-![image](assets/images/rainydays_no_catchphrase.png)
 ![image](Assets/images/rainydays_full_logo.png)
 
-A simple overview of the use/purpose of the project.
+This project is a fictional e-commerce site that sells clothing for outdoors. their primary target audience are poeple 30+ that wants to go outdoors. This was also my first major project as a front-end dev student.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
-
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
-
 ## Built With
 
-You can list a the tech stack that you've used over here
+- HTML
+- CSS 
+- JS
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+was originally made as HTML and CSS only.
 
 ## Getting Started
 
@@ -32,7 +24,7 @@ This is where you list how to get the project started. It typically just include
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone git@github.com:StianSto/CrossCourse-assignment.git
 ```
 
 2. Install the dependencies:
